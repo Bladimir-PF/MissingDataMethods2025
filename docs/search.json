@@ -18,20 +18,13 @@
     "href": "index.html#course-details",
     "title": "Missing Data Methods (Spring 2025; University of Iowa: PSQF 7375)",
     "section": "Course Details",
-    "text": "Course Details\n\n\n\nInstructor:\nJonathan Templin\n\n\nemail:\njonathan-templin@uiowa.edu\n\n\nCourse website:\nTBA\n\n\nCourse repo:\nhttps://github.com/jonathantemplin/MissingDataMethods2025\n\n\nCourse YouTube Playlist:\nTBA\n\n\nOffice:\nS300A Lindquist Center\n\n\nOffice Phone:\n319-335-6429\n\n\nClassroom:\nS108 LC\n\n\nCourse Meeting Time:\nW 12:30pm-3:20pm\n\n\nCourse Office Hours:\nW 10:00am-12:00pm via Zoom at https://uiowa.zoom.us/my/jonathantemplinuiowa"
+    "text": "Course Details\n\n\n\nInstructor:\nJonathan Templin\n\n\nemail:\njonathan-templin@uiowa.edu\n\n\nCourse website:\nhttps://jonathantemplin.github.io/MissingDataMethods2025/\n\n\nCourse repo:\nhttps://github.com/jonathantemplin/MissingDataMethods2025\n\n\nCourse YouTube Playlist:\nTBA\n\n\nOffice:\nS300A Lindquist Center\n\n\nOffice Phone:\n319-335-6429\n\n\nClassroom:\nS108 LC\n\n\nCourse Meeting Time:\nW 12:30pm-3:20pm\n\n\nCourse Office Hours:\nW 10:00am-12:00pm via Zoom at https://uiowa.zoom.us/my/jonathantemplinuiowa\n\n\nSyllabus:"
   },
   {
     "objectID": "index.html#current-assignments",
     "href": "index.html#current-assignments",
     "title": "Missing Data Methods (Spring 2025; University of Iowa: PSQF 7375)",
     "section": "Current Assignments",
-    "text": "Current Assignments\nNone!"
-  },
-  {
-    "objectID": "index.html#course-schedule",
-    "href": "index.html#course-schedule",
-    "title": "Missing Data Methods (Spring 2025; University of Iowa: PSQF 7375)",
-    "section": "Course Schedule",
-    "text": "Course Schedule\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nReading\nLecture Files\nLecture Videos\n\n\n\n\n1\n22 Jan\nIntroduction to Missing Data\nChapter 1\n—\n—\n\n\n2\n29 Jan\nMaximum Likelihood Estimation\nChapter 2\n—\n—\n\n\n3\n5 Feb\nMaximum Likelihood Estimation with Missing Data\nChapter 3\n—\n—\n\n\n4\n12 Feb\nBayesian Estimation\nChapter 4\n—\n—\n\n\n5\n19 Feb\nBayesian Estimation with Missing Data\nChapter 5\n—\n—\n\n\n6\n26 Feb\nBayesian Estimation for Categorical Variables\nChapter 6\n—\n—\n\n\n7\n5 Mar\nMultiple Imputation\nChapter 7\n—\n—\n\n\n8\n12 Mar\nMultilevel Missing Data\nChapter 8\n—\n—\n\n\n9\n19 Mar\nSpring Break: No Class\nNo Readings\n—\n—\n\n\n10\n26 Mar\nMissing Not at Random Processes\nChapter 9\n—\n—\n\n\n11\n2 Apr\nSpecial Topics and Applications\nChapter 10\n—\n—\n\n\n12\n9 Apr\nGuidance for Working with Missing Data\nChapter 11\n—\n—\n\n\n13\n16 Apr\nMissing Data in Psychometric Models: Latent Variable Scores\nMislevy et al. (1992)\n—\n—\n\n\n14\n23 Apr\nNo Class: AERA/NCME Conference\n—\n—\n\n\n\n15\n30 Apr\nMissing Data in Psychometric Models: Implications for CAT\nDoebler et al. (2013); Jewsbury et al. (2024);\n—\n—\n\n\n16\n7 May\nProject Presentations\nNo Readings\n—\n—"
+    "text": "Current Assignments\nNone!\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nReading\n\n\n\n\n1\n22 Jan\nIntroduction to Class/Major Types of Missing Data\nNone\n\n\n2\n29 Jan\nIntroduction to Missing Data\nChapter 1\n\n\n3\n5 Feb\nMaximum Likelihood Estimation\nChapter 2\n\n\n4\n12 Feb\nMaximum Likelihood Estimation with Missing Data\nChapter 3\n\n\n5\n19 Feb\nBayesian Estimation\nChapter 4\n\n\n6\n26 Feb\nBayesian Estimation with Missing Data\nChapter 5\n\n\n7\n5 Mar\nBayesian Estimation for Categorical Variables\nChapter 6\n\n\n8\n12 Mar\nMultiple Imputation\nChapter 7\n\n\n9\n19 Mar\nSpring Break: No Class\nNo Readings\n\n\n10\n26 Mar\nMultilevel Missing Data\nChapter 8\n\n\n11\n2 Apr\nMissing Not at Random Processes\nChapter 9\n\n\n12\n9 Apr\nSpecial Topics and Applications\nChapter 10\n\n\n13\n16 Apr\nGuidance for Working with Missing Data\nChapter 11\n\n\n14\n23 Apr\nMissing Data in Psychometric Models: Latent Variable Scores\nMislevy et al. (1992)\n\n\n15\n30 Apr\nNo Class: AERA/NCME Conference\n\n\n\n16\n7 May\nMissing Data in Psychometric Models: Implications for CAT\nDoebler et al. (2013); Jewsbury et al. (2024);"
   }
 ]

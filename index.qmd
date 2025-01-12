@@ -16,7 +16,7 @@ The course will follow the chapters of Applied Missing Data Analysis (2nd Editio
 |----|----|
 | Instructor: | Jonathan Templin |
 | email: | [jonathan-templin\@uiowa.edu](mailto:jonathan-templin@uiowa.edu) |
-| Course website: | TBA |
+| Course website: | [https://jonathantemplin.github.io/MissingDataMethods2025/](https://jonathantemplin.github.io/MissingDataMethods2025/) |
 | Course repo: | <https://github.com/jonathantemplin/MissingDataMethods2025> |
 | Course YouTube Playlist: | TBA |
 | Office: | S300A Lindquist Center |
@@ -24,28 +24,27 @@ The course will follow the chapters of Applied Missing Data Analysis (2nd Editio
 | Classroom: | S108 LC |
 | Course Meeting Time: | W 12:30pm-3:20pm |
 | Course Office Hours: | W 10:00am-12:00pm via Zoom at <https://uiowa.zoom.us/my/jonathantemplinuiowa> |
+| Syllabus: |
 
 ## Current Assignments
 
 None!
 
-## Course Schedule
-
-| Week | Date | Topic | Reading | Lecture Files | Lecture Videos |
-|----|----|----|----|----|----|
-| 1 | 22 Jan | Introduction to Missing Data | Chapter 1 | --- | --- |
-| 2 | 29 Jan | Maximum Likelihood Estimation | Chapter 2 | --- | --- |
-| 3 | 5 Feb | Maximum Likelihood Estimation with Missing Data | Chapter 3 | --- | --- |
-| 4 | 12 Feb | Bayesian Estimation | Chapter 4 | --- | --- |
-| 5 | 19 Feb | Bayesian Estimation with Missing Data | Chapter 5 | --- | --- |
-| 6 | 26 Feb | Bayesian Estimation for Categorical Variables | Chapter 6 | --- | --- |
-| 7 | 5 Mar | Multiple Imputation | Chapter 7 | --- | --- |
-| 8 | 12 Mar | Multilevel Missing Data | Chapter 8 | --- | --- |
-| 9 | 19 Mar | Spring Break: No Class | No Readings | --- | --- |
-| 10 | 26 Mar | Missing Not at Random Processes | Chapter 9 | --- | --- |
-| 11 | 2 Apr | Special Topics and Applications | Chapter 10 | --- | --- |
-| 12 | 9 Apr | Guidance for Working with Missing Data | Chapter 11 | --- | --- |
-| 13 | 16 Apr | Missing Data in Psychometric Models: Latent Variable Scores | Mislevy et al. (1992) | --- | --- |
-| 14 | 23 Apr | No Class: AERA/NCME Conference | --- | --- |  |
-| 15 | 30 Apr | Missing Data in Psychometric Models: Implications for CAT | Doebler et al. (2013); Jewsbury et al. (2024); | --- | --- |
-| 16 | 7 May | Project Presentations | No Readings | --- | --- |
+| Week | Date | Topic | Reading | 
+|------|------|-------|---------|
+| 1 | 22 Jan  | Introduction to Class/Major Types of Missing Data | None |
+| 2 | 29 Jan  | Introduction to Missing Data | Chapter 1 |
+| 3 | 5 Feb  | Maximum Likelihood Estimation | Chapter 2 |
+| 4 | 12 Feb  | Maximum Likelihood Estimation with Missing Data | Chapter 3 |
+| 5 | 19 Feb | Bayesian Estimation | Chapter 4 |
+| 6 | 26 Feb | Bayesian Estimation with Missing Data | Chapter 5 |
+| 7 | 5 Mar | Bayesian Estimation for Categorical Variables | Chapter 6 |
+| 8 | 12 Mar | Multiple Imputation | Chapter 7 |
+| 9 | 19 Mar | Spring Break: No Class | No Readings |
+| 10 | 26 Mar | Multilevel Missing Data | Chapter 8 |
+| 11 | 2 Apr | Missing Not at Random Processes | Chapter 9 |
+| 12 | 9 Apr | Special Topics and Applications | Chapter 10 |
+| 13 | 16 Apr | Guidance for Working with Missing Data  | Chapter 11 |
+| 14 | 23 Apr | Missing Data in Psychometric Models: Latent Variable Scores| Mislevy et al. (1992) |
+| 15 | 30 Apr | No Class: AERA/NCME Conference |
+| 16 | 7 May | Missing Data in Psychometric Models: Implications for CAT | Doebler et al. (2013); Jewsbury et al. (2024); |
