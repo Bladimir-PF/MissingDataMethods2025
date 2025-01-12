@@ -18,7 +18,7 @@
     "href": "index.html#course-details",
     "title": "Missing Data Methods (Spring 2025; University of Iowa: PSQF 7375)",
     "section": "Course Details",
-    "text": "Course Details\n\n\n\nInstructor:\nJonathan Templin\n\n\nemail:\njonathan-templin@uiowa.edu\n\n\nCourse website:\nhttps://jonathantemplin.github.io/MissingDataMethods2025/\n\n\nCourse repo:\nhttps://github.com/jonathantemplin/MissingDataMethods2025\n\n\nCourse YouTube Playlist:\nTBA\n\n\nOffice:\nS300A Lindquist Center\n\n\nOffice Phone:\n319-335-6429\n\n\nClassroom:\nS108 LC\n\n\nCourse Meeting Time:\nW 12:30pm-3:20pm\n\n\nCourse Office Hours:\nW 10:00am-12:00pm via Zoom at https://uiowa.zoom.us/my/jonathantemplinuiowa\n\n\nSyllabus:"
+    "text": "Course Details\n\n\n\nInstructor:\nJonathan Templin\n\n\nemail:\njonathan-templin@uiowa.edu\n\n\nCourse website:\nhttps://jonathantemplin.github.io/MissingDataMethods2025/\n\n\nCourse repo:\nhttps://github.com/jonathantemplin/MissingDataMethods2025\n\n\nCourse YouTube Playlist:\nTBA\n\n\nOffice:\nS300A Lindquist Center\n\n\nOffice Phone:\n319-335-6429\n\n\nClassroom:\nS108 LC\n\n\nCourse Meeting Time:\nW 12:30pm-3:20pm\n\n\nCourse Office Hours:\nW 10:00am-12:00pm via Zoom at https://uiowa.zoom.us/my/jonathantemplinuiowa\n\n\nSyllabus:\nhttps://jonathantemplin.github.io/MissingDataMethods2025/syllabus/s25mdm_syllabus.pdf"
   },
   {
     "objectID": "index.html#current-assignments",
@@ -26,5 +26,68 @@
     "title": "Missing Data Methods (Spring 2025; University of Iowa: PSQF 7375)",
     "section": "Current Assignments",
     "text": "Current Assignments\nNone!\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nReading\n\n\n\n\n1\n22 Jan\nIntroduction to Class/Major Types of Missing Data\nNone\n\n\n2\n29 Jan\nIntroduction to Missing Data\nChapter 1\n\n\n3\n5 Feb\nMaximum Likelihood Estimation\nChapter 2\n\n\n4\n12 Feb\nMaximum Likelihood Estimation with Missing Data\nChapter 3\n\n\n5\n19 Feb\nBayesian Estimation\nChapter 4\n\n\n6\n26 Feb\nBayesian Estimation with Missing Data\nChapter 5\n\n\n7\n5 Mar\nBayesian Estimation for Categorical Variables\nChapter 6\n\n\n8\n12 Mar\nMultiple Imputation\nChapter 7\n\n\n9\n19 Mar\nSpring Break: No Class\nNo Readings\n\n\n10\n26 Mar\nMultilevel Missing Data\nChapter 8\n\n\n11\n2 Apr\nMissing Not at Random Processes\nChapter 9\n\n\n12\n9 Apr\nSpecial Topics and Applications\nChapter 10\n\n\n13\n16 Apr\nGuidance for Working with Missing Data\nChapter 11\n\n\n14\n23 Apr\nMissing Data in Psychometric Models: Latent Variable Scores\nMislevy et al. (1992)\n\n\n15\n30 Apr\nNo Class: AERA/NCME Conference\n\n\n\n16\n7 May\nMissing Data in Psychometric Models: Implications for CAT\nDoebler et al. (2013); Jewsbury et al. (2024);"
+  },
+  {
+    "objectID": "s25mdm_syllabus.html",
+    "href": "s25mdm_syllabus.html",
+    "title": "PSQF 7375: Missing Data Methods Syllabus; Spring 2024",
+    "section": "",
+    "text": "Note: The online syllabus at the address provided above will always have the most current information."
+  },
+  {
+    "objectID": "s25mdm_syllabus.html#course-information",
+    "href": "s25mdm_syllabus.html#course-information",
+    "title": "PSQF 7375: Missing Data Methods Syllabus; Spring 2024",
+    "section": "Course Information",
+    "text": "Course Information\n\n\n\nInstructor:\nJonathan Templin\n\n\nemail:\njonathan-templin@uiowa.edu\n\n\nCourse website:\nTBA\n\n\nCourse repo:\nTBA\n\n\nCourse YouTube Playlist:\nTBA\n\n\nOffice:\nS300A Lindquist Center\n\n\nOffice Phone:\n319-335-6429\n\n\nClassroom:\nS108 LC\n\n\nCourse Meeting Time:\nW 12:30pm-3:20pm\n\n\nCourse Office Hours:\nW 10:00am-12:00pm via Zoom at https://uiowa.zoom.us/my/jonathantemplinuiowa\n\n\n\n\nCourse Objectives, Materials, and Prerequesites\nThis course section explores missing data methods in applied statistics, data science, and psychometrics; emphasizing techniques such as multiple imputation, Bayesian methods, and maximum likelihood to handle and analyze incomplete datasets effectively."
+  },
+  {
+    "objectID": "s25mdm_syllabus.html#course-readings",
+    "href": "s25mdm_syllabus.html#course-readings",
+    "title": "PSQF 7375: Missing Data Methods Syllabus; Spring 2024",
+    "section": "Course Readings",
+    "text": "Course Readings\nThe course will follow the chapters of Applied Missing Data Analysis (2nd Edition) by Craig Enders. The University of Iowa Library has electronic access to the book at https://ebookcentral-proquest-com.proxy.lib.uiowa.edu/lib/uiowa/detail.action?docID=7027149. Additional readings will be posted our course ICON site."
+  },
+  {
+    "objectID": "s25mdm_syllabus.html#tentative-course-schedule",
+    "href": "s25mdm_syllabus.html#tentative-course-schedule",
+    "title": "PSQF 7375: Missing Data Methods Syllabus; Spring 2024",
+    "section": "Tentative Course Schedule",
+    "text": "Tentative Course Schedule\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nReading\n\n\n\n\n1\n22 Jan\nIntroduction to Class/Major Types of Missing Data\nNone\n\n\n2\n29 Jan\nIntroduction to Missing Data\nChapter 1\n\n\n3\n5 Feb\nMaximum Likelihood Estimation\nChapter 2\n\n\n4\n12 Feb\nMaximum Likelihood Estimation with Missing Data\nChapter 3\n\n\n5\n19 Feb\nBayesian Estimation\nChapter 4\n\n\n6\n26 Feb\nBayesian Estimation with Missing Data\nChapter 5\n\n\n7\n5 Mar\nBayesian Estimation for Categorical Variables\nChapter 6\n\n\n8\n12 Mar\nMultiple Imputation\nChapter 7\n\n\n9\n19 Mar\nSpring Break: No Class\nNo Readings\n\n\n10\n26 Mar\nMultilevel Missing Data\nChapter 8\n\n\n11\n2 Apr\nMissing Not at Random Processes\nChapter 9\n\n\n12\n9 Apr\nSpecial Topics and Applications\nChapter 10\n\n\n13\n16 Apr\nGuidance for Working with Missing Data\nChapter 11\n\n\n14\n23 Apr\nMissing Data in Psychometric Models: Latent Variable Scores\nMislevy et al. (1992)\n\n\n15\n30 Apr\nNo Class: AERA/NCME Conference\n\n\n\n16\n7 May\nMissing Data in Psychometric Models: Implications for CAT\nDoebler et al. (2013); Jewsbury et al. (2024);"
+  },
+  {
+    "objectID": "s25mdm_syllabus.html#additional-readings",
+    "href": "s25mdm_syllabus.html#additional-readings",
+    "title": "PSQF 7375: Missing Data Methods Syllabus; Spring 2024",
+    "section": "Additional Readings",
+    "text": "Additional Readings\nMislevy, R. J., Beaton, A. E., Kaplan, B., & Sheehan, K. M. (1992). Estimating population characteristics from sparse matrix samples of item responses. Journal of Educational Measurement, 29(2), 133-161.\nJewsbury, P. A., Lu, R., & van Rijn, P. W. (2024). A general framework for modeling missing data due to item selection with item response theory. Methodology, 20(3), 218-237.\nDoebler, A., Doebler, P., & Holling, H. (2013). Optimal and most exact confidence intervals for person parameters in item response theory models. Psychometrika, 78(1), 98-115."
+  },
+  {
+    "objectID": "s25mdm_syllabus.html#course-websitetechnology",
+    "href": "s25mdm_syllabus.html#course-websitetechnology",
+    "title": "PSQF 7375: Missing Data Methods Syllabus; Spring 2024",
+    "section": "Course Website/Technology",
+    "text": "Course Website/Technology\nICON will be used for grades, submission of assignments, disseminating course readings, and course communications.\nICON will not be used for lecture materials. Instead, we will use freely available commercial software for communication and dissemination of course materials. Course lecture slides, lecture examples, video files, assignments, and information are available on the website. Additionally, all course materials will be available using the course Git repository.\nAll lectures will be archived on YouTube (my YouTube channel is https://jonathantemplin.com/YouTube).\n\nStatistical Computing\nThe course will use the R statistical package with the R Studio development suite along with a set of R packages (both Bayesian and Non-Bayesian). Additionally, we will use the JAGS and Stan open-source Bayesian estimation programs. R and R Studio work with JAGS and Stan by using a series of downloadable packages which will be used throughout the course.\nR, R Studio, and stan are available for free from the following websites: R: https://www.r-project.org/ R Studio: https://www.rstudio.com/ Stan: https://mc-stan.org/ JAGS: https://mcmc-jags.sourceforge.io\nThe University of Iowa enables access for many of these programs through their research computing resources: R Studio Notebooks: https://notebooks.hpc.uiowa.edu/ High Performance Computing: https://hpc.uiowa.edu/\nAlthough this software is available at the University of Iowa, I ask that you install all versions on your local computer as campus resources can be difficult to use for many analyses."
+  },
+  {
+    "objectID": "s25mdm_syllabus.html#homework-formative-assessments-and-course-project",
+    "href": "s25mdm_syllabus.html#homework-formative-assessments-and-course-project",
+    "title": "PSQF 7375: Missing Data Methods Syllabus; Spring 2024",
+    "section": "Homework, Formative Assessments, and Course Project",
+    "text": "Homework, Formative Assessments, and Course Project\nStudent evaluation will be made based three components: (1) homework assignments (50% of course grade), (2) assigned reading assessments (20% of course grade), and (3) a final examination (30% of course grade).\nMathematically, the grade percentage can be expressed as:\n\\[GP = .5\\times HP + .2 \\times ARP + .3 \\times FP, \\] Where:\n\nGP is the Grade Percentage\nHP is the Homework Percentage\nARP is the book Assessment Percentage\nFP is the Final Examination Percentage\n\n\nHomework Assignments\nThere will be a set of homework assignments, the number to be determined. For each assignment, students will have a minimum of two weeks to complete the assignment. Homework assignments will weighted equally with respect to the 60%/ of the course grade accounted for by homework. The lowest homework percentage will be dropped (to allow for grace for late homework).\nMathematically, the homework percentage can be expressed as:\n\\[HP = \\left[\\frac{\\left( \\sum_{h=1}^H P_h \\right)-\\min_h P_h} {H-1}\\right],\\] where \\(P_h\\) is the percent correct on homework \\(h\\), with \\(H\\) total homeworks.\nIn order to be able to provide the entire class with prompt feedback, late homework assignments will not be accepted. However, extensions may be granted as needed for extenuating circumstances (e.g., conferences, family obligations) if requested at least three weeks in advance of the due date. Additionally, late homework due to emergencies will be accepted with documentation of the circumstances of the emergency.\nAll assignments must be completed in R, using R Markdown as a file format, and submitted via ICON. Although students are encouraged to work together on the concepts underlying homework, all answers must be from student’s own work (writing and syntax) and not be copied or paraphrased from anyone else’s answers. Grammar and writing will be assessed by each homework and will factor into the homework grade.\n\n\nAssigned Reading Assessments\nEach week, students will take a short assessment in ICON with questions pertaining to the reading assigned that week. The purpose of the assigned reading assessment is to ensure reading materials are read prior to class being held. Questions will be graded correct/incorrect.\n\n\nVerbal Final Examination\nAs we live in the era of large language models, rather than a written project, students will be required to complete a verbal final examination. The verbal final examination will be a one-on-one meeting with the instructor. The verbal final examination will account for 30% of the course grade.\nThe contents of the final will be the entirety of the course materials, with an emphasis on the readings and the homework assignments. The verbal final examination will be held during finals week (Wednesday, May 14th) via Zoom. A sign-up sheet for an examination time blocks will be posted on ICON.\n\n\nCourse Grading System\n\n\n\nPoint Total\nLetter Grade\n\n\n\n\n100 and Above\nA+\n\n\n99-93\nA\n\n\n92-90\nA-\n\n\n89-87\nB+\n\n\n86-83\nB\n\n\n82-80\nB-\n\n\n79-77\nC+\n\n\n76-73\nC\n\n\n72-70\nC-\n\n\n69-60\nD\n\n\nBelow 60\nF"
+  },
+  {
+    "objectID": "s25mdm_syllabus.html#use-of-artificial-intelligence-or-other-technology",
+    "href": "s25mdm_syllabus.html#use-of-artificial-intelligence-or-other-technology",
+    "title": "PSQF 7375: Missing Data Methods Syllabus; Spring 2024",
+    "section": "Use of Artificial Intelligence or Other Technology",
+    "text": "Use of Artificial Intelligence or Other Technology\nThis course assumes that work submitted by students—all process work, drafts, low-stakes writing, final versions, and all other submissions—will be generated by the students themselves, working individually. This means that the following would be considered violations of academic integrity: a student has another person/entity do the writing of any substantive portion of an assignment for them, which includes hiring a person or a company to write essays and drafts and/or other assignments, research-based or otherwise, and using artificial intelligence affordances like ChatGPT."
+  },
+  {
+    "objectID": "s25mdm_syllabus.html#university-of-iowa-course-policies-and-resources-for-students",
+    "href": "s25mdm_syllabus.html#university-of-iowa-course-policies-and-resources-for-students",
+    "title": "PSQF 7375: Missing Data Methods Syllabus; Spring 2024",
+    "section": "University of Iowa Course Policies and Resources for Students",
+    "text": "University of Iowa Course Policies and Resources for Students\n\nStudent Complaint Procedure: https://education.uiowa.edu/faculty-and-staff-resources/student-complaint-procedure\nCollege policy on student academic misconduct: https://education.uiowa.edu/faculty-and-staff-resources/student-academic-misconduct\nUniversity policies https://provost.uiowa.edu/student-course-policies"
   }
 ]

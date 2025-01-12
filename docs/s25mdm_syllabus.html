@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2024-12-01">
 
-<title>Missing Data Methods (Spring 2025; University of Iowa: PSQF 7375) – MissingDataMethods2025</title>
+<title>PSQF 7375: Missing Data Methods Syllabus; Spring 2024 – MissingDataMethods2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -82,10 +112,26 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#course-objectives" id="toc-course-objectives" class="nav-link active" data-scroll-target="#course-objectives">Course Objectives</a></li>
+  <li><a href="#course-information" id="toc-course-information" class="nav-link active" data-scroll-target="#course-information">Course Information</a>
+  <ul class="collapse">
+  <li><a href="#course-objectives-materials-and-prerequesites" id="toc-course-objectives-materials-and-prerequesites" class="nav-link" data-scroll-target="#course-objectives-materials-and-prerequesites">Course Objectives, Materials, and Prerequesites</a></li>
+  </ul></li>
   <li><a href="#course-readings" id="toc-course-readings" class="nav-link" data-scroll-target="#course-readings">Course Readings</a></li>
-  <li><a href="#course-details" id="toc-course-details" class="nav-link" data-scroll-target="#course-details">Course Details</a></li>
-  <li><a href="#current-assignments" id="toc-current-assignments" class="nav-link" data-scroll-target="#current-assignments">Current Assignments</a></li>
+  <li><a href="#tentative-course-schedule" id="toc-tentative-course-schedule" class="nav-link" data-scroll-target="#tentative-course-schedule">Tentative Course Schedule</a></li>
+  <li><a href="#additional-readings" id="toc-additional-readings" class="nav-link" data-scroll-target="#additional-readings">Additional Readings</a></li>
+  <li><a href="#course-websitetechnology" id="toc-course-websitetechnology" class="nav-link" data-scroll-target="#course-websitetechnology">Course Website/Technology</a>
+  <ul class="collapse">
+  <li><a href="#statistical-computing" id="toc-statistical-computing" class="nav-link" data-scroll-target="#statistical-computing">Statistical Computing</a></li>
+  </ul></li>
+  <li><a href="#homework-formative-assessments-and-course-project" id="toc-homework-formative-assessments-and-course-project" class="nav-link" data-scroll-target="#homework-formative-assessments-and-course-project">Homework, Formative Assessments, and Course Project</a>
+  <ul class="collapse">
+  <li><a href="#homework-assignments" id="toc-homework-assignments" class="nav-link" data-scroll-target="#homework-assignments">Homework Assignments</a></li>
+  <li><a href="#assigned-reading-assessments" id="toc-assigned-reading-assessments" class="nav-link" data-scroll-target="#assigned-reading-assessments">Assigned Reading Assessments</a></li>
+  <li><a href="#verbal-final-examination" id="toc-verbal-final-examination" class="nav-link" data-scroll-target="#verbal-final-examination">Verbal Final Examination</a></li>
+  <li><a href="#course-grading-system" id="toc-course-grading-system" class="nav-link" data-scroll-target="#course-grading-system">Course Grading System</a></li>
+  </ul></li>
+  <li><a href="#use-of-artificial-intelligence-or-other-technology" id="toc-use-of-artificial-intelligence-or-other-technology" class="nav-link" data-scroll-target="#use-of-artificial-intelligence-or-other-technology">Use of Artificial Intelligence or Other Technology</a></li>
+  <li><a href="#university-of-iowa-course-policies-and-resources-for-students" id="toc-university-of-iowa-course-policies-and-resources-for-students" class="nav-link" data-scroll-target="#university-of-iowa-course-policies-and-resources-for-students">University of Iowa Course Policies and Resources for Students</a></li>
   </ul>
 </nav>
     </div>
@@ -94,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Missing Data Methods (Spring 2025; University of Iowa: PSQF 7375)</h1>
+<h1 class="title">PSQF 7375: Missing Data Methods Syllabus; Spring 2024</h1>
 </div>
 
 
@@ -102,6 +148,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 1, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -111,16 +163,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="course-objectives" class="level3">
-<h3 class="anchored" data-anchor-id="course-objectives">Course Objectives</h3>
-<p>This course section explores missing data methods in applied statistics, data science, and psychometrics; emphasizing techniques such as multiple imputation, Bayesian methods, and maximum likelihood to handle and analyze incomplete data sets effectively.</p>
-</section>
-<section id="course-readings" class="level2">
-<h2 class="anchored" data-anchor-id="course-readings">Course Readings</h2>
-<p>The course will follow the chapters of Applied Missing Data Analysis (2nd Edition) by Craig Enders. The University of Iowa Library has electronic access to the book at <a href="https://ebookcentral-proquest-com.proxy.lib.uiowa.edu/lib/uiowa/detail.action?docID=7027149" class="uri">https://ebookcentral-proquest-com.proxy.lib.uiowa.edu/lib/uiowa/detail.action?docID=7027149</a>. Additional readings will be posted our course ICON site.</p>
-</section>
-<section id="course-details" class="level2">
-<h2 class="anchored" data-anchor-id="course-details">Course Details</h2>
+<p><em>Note:</em> The online syllabus at the address provided above will always have the most current information.</p>
+<section id="course-information" class="level2">
+<h2 class="anchored" data-anchor-id="course-information">Course Information</h2>
 <table class="caption-top table">
 <tbody>
 <tr class="odd">
@@ -129,15 +174,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>email:</td>
-<td><a href="mailto:jonathan-templin@uiowa.edu">jonathan-templin@uiowa.edu</a></td>
+<td>jonathan-templin@uiowa.edu</td>
 </tr>
 <tr class="odd">
 <td>Course website:</td>
-<td><a href="https://jonathantemplin.github.io/MissingDataMethods2025/" class="uri">https://jonathantemplin.github.io/MissingDataMethods2025/</a></td>
+<td>TBA</td>
 </tr>
 <tr class="even">
 <td>Course repo:</td>
-<td><a href="https://github.com/jonathantemplin/MissingDataMethods2025" class="uri">https://github.com/jonathantemplin/MissingDataMethods2025</a></td>
+<td>TBA</td>
 </tr>
 <tr class="odd">
 <td>Course YouTube Playlist:</td>
@@ -163,22 +208,25 @@ ul.task-list li input[type="checkbox"] {
 <td>Course Office Hours:</td>
 <td>W 10:00am-12:00pm via Zoom at <a href="https://uiowa.zoom.us/my/jonathantemplinuiowa" class="uri">https://uiowa.zoom.us/my/jonathantemplinuiowa</a></td>
 </tr>
-<tr class="odd">
-<td>Syllabus:</td>
-<td><a href="https://jonathantemplin.github.io/MissingDataMethods2025/syllabus/s25mdm_syllabus.pdf">https://jonathantemplin.github.io/MissingDataMethods2025/syllabus/s25mdm_syllabus.pdf</a></td>
-</tr>
 </tbody>
 </table>
+<section id="course-objectives-materials-and-prerequesites" class="level3">
+<h3 class="anchored" data-anchor-id="course-objectives-materials-and-prerequesites">Course Objectives, Materials, and Prerequesites</h3>
+<p>This course section explores missing data methods in applied statistics, data science, and psychometrics; emphasizing techniques such as multiple imputation, Bayesian methods, and maximum likelihood to handle and analyze incomplete datasets effectively.</p>
 </section>
-<section id="current-assignments" class="level2">
-<h2 class="anchored" data-anchor-id="current-assignments">Current Assignments</h2>
-<p>None!</p>
+</section>
+<section id="course-readings" class="level2">
+<h2 class="anchored" data-anchor-id="course-readings">Course Readings</h2>
+<p>The course will follow the chapters of Applied Missing Data Analysis (2nd Edition) by Craig Enders. The University of Iowa Library has electronic access to the book at <a href="https://ebookcentral-proquest-com.proxy.lib.uiowa.edu/lib/uiowa/detail.action?docID=7027149" class="uri">https://ebookcentral-proquest-com.proxy.lib.uiowa.edu/lib/uiowa/detail.action?docID=7027149</a>. Additional readings will be posted our course ICON site.</p>
+</section>
+<section id="tentative-course-schedule" class="level2">
+<h2 class="anchored" data-anchor-id="tentative-course-schedule">Tentative Course Schedule</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 23%">
-<col style="width: 23%">
-<col style="width: 23%">
-<col style="width: 30%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -287,6 +335,127 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+</section>
+<section id="additional-readings" class="level2">
+<h2 class="anchored" data-anchor-id="additional-readings">Additional Readings</h2>
+<p>Mislevy, R. J., Beaton, A. E., Kaplan, B., &amp; Sheehan, K. M. (1992). Estimating population characteristics from sparse matrix samples of item responses. Journal of Educational Measurement, 29(2), 133-161.</p>
+<p>Jewsbury, P. A., Lu, R., &amp; van Rijn, P. W. (2024). A general framework for modeling missing data due to item selection with item response theory. Methodology, 20(3), 218-237.</p>
+<p>Doebler, A., Doebler, P., &amp; Holling, H. (2013). Optimal and most exact confidence intervals for person parameters in item response theory models. Psychometrika, 78(1), 98-115.</p>
+</section>
+<section id="course-websitetechnology" class="level2">
+<h2 class="anchored" data-anchor-id="course-websitetechnology">Course Website/Technology</h2>
+<p>ICON <em>will</em> be used for grades, submission of assignments, disseminating course readings, and course communications.</p>
+<p>ICON <em>will not</em> be used for lecture materials. Instead, we will use freely available commercial software for communication and dissemination of course materials. Course lecture slides, lecture examples, video files, assignments, and information are available on the website. Additionally, all course materials will be available using the course Git repository.</p>
+<p>All lectures will be archived on YouTube (my YouTube channel is https://jonathantemplin.com/YouTube).</p>
+<section id="statistical-computing" class="level3">
+<h3 class="anchored" data-anchor-id="statistical-computing">Statistical Computing</h3>
+<p>The course will use the R statistical package with the R Studio development suite along with a set of R packages (both Bayesian and Non-Bayesian). Additionally, we will use the JAGS and Stan open-source Bayesian estimation programs. R and R Studio work with JAGS and Stan by using a series of downloadable packages which will be used throughout the course.</p>
+<p>R, R Studio, and stan are available for free from the following websites: R: <a href="https://www.r-project.org/" class="uri">https://www.r-project.org/</a> R Studio: <a href="https://mc-stan.org/">https://www.rstudio.com/</a> Stan: <a href="https://mc-stan.org/" class="uri">https://mc-stan.org/</a> JAGS: <a href="https://mcmc-jags.sourceforge.io" class="uri">https://mcmc-jags.sourceforge.io</a></p>
+<p>The University of Iowa enables access for many of these programs through their research computing resources: R Studio Notebooks: https://notebooks.hpc.uiowa.edu/ High Performance Computing: https://hpc.uiowa.edu/</p>
+<p>Although this software is available at the University of Iowa, I ask that you install all versions on your local computer as campus resources can be difficult to use for many analyses.</p>
+</section>
+</section>
+<section id="homework-formative-assessments-and-course-project" class="level2">
+<h2 class="anchored" data-anchor-id="homework-formative-assessments-and-course-project">Homework, Formative Assessments, and Course Project</h2>
+<p>Student evaluation will be made based three components: (1) homework assignments (50% of course grade), (2) assigned reading assessments (20% of course grade), and (3) a final examination (30% of course grade).</p>
+<p>Mathematically, the grade percentage can be expressed as:</p>
+<p><span class="math display">\[GP = .5\times HP + .2 \times ARP + .3 \times FP, \]</span> Where:</p>
+<ul>
+<li>GP is the Grade Percentage</li>
+<li>HP is the Homework Percentage</li>
+<li>ARP is the book Assessment Percentage</li>
+<li>FP is the Final Examination Percentage</li>
+</ul>
+<section id="homework-assignments" class="level3">
+<h3 class="anchored" data-anchor-id="homework-assignments">Homework Assignments</h3>
+<p>There will be a set of homework assignments, the number to be determined. For each assignment, students will have a minimum of two weeks to complete the assignment. Homework assignments will weighted equally with respect to the 60%/ of the course grade accounted for by homework. The lowest homework percentage will be dropped (to allow for grace for late homework).</p>
+<p>Mathematically, the homework percentage can be expressed as:</p>
+<p><span class="math display">\[HP = \left[\frac{\left( \sum_{h=1}^H P_h \right)-\min_h P_h} {H-1}\right],\]</span> where <span class="math inline">\(P_h\)</span> is the percent correct on homework <span class="math inline">\(h\)</span>, with <span class="math inline">\(H\)</span> total homeworks.</p>
+<p>In order to be able to provide the entire class with prompt feedback, late homework assignments will not be accepted. However, extensions may be granted as needed for extenuating circumstances (e.g., conferences, family obligations) if requested at least three weeks in advance of the due date. Additionally, late homework due to emergencies will be accepted with documentation of the circumstances of the emergency.</p>
+<p>All assignments must be completed in R, using R Markdown as a file format, and submitted via ICON. Although students are encouraged to work together on the concepts underlying homework, all answers must be from student’s own work (writing and syntax) and not be copied or paraphrased from anyone else’s answers. Grammar and writing will be assessed by each homework and will factor into the homework grade.</p>
+</section>
+<section id="assigned-reading-assessments" class="level3">
+<h3 class="anchored" data-anchor-id="assigned-reading-assessments">Assigned Reading Assessments</h3>
+<p>Each week, students will take a short assessment in ICON with questions pertaining to the reading assigned that week. The purpose of the assigned reading assessment is to ensure reading materials are read prior to class being held. Questions will be graded correct/incorrect.</p>
+</section>
+<section id="verbal-final-examination" class="level3">
+<h3 class="anchored" data-anchor-id="verbal-final-examination">Verbal Final Examination</h3>
+<p>As we live in the era of large language models, rather than a written project, students will be required to complete a verbal final examination. The verbal final examination will be a one-on-one meeting with the instructor. The verbal final examination will account for 30% of the course grade.</p>
+<p>The contents of the final will be the entirety of the course materials, with an emphasis on the readings and the homework assignments. The verbal final examination will be held during finals week (Wednesday, May 14th) via Zoom. A sign-up sheet for an examination time blocks will be posted on ICON.</p>
+</section>
+<section id="course-grading-system" class="level3">
+<h3 class="anchored" data-anchor-id="course-grading-system">Course Grading System</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Point Total</th>
+<th style="text-align: left;">Letter Grade</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>100 and Above</td>
+<td style="text-align: left;">A+</td>
+</tr>
+<tr class="even">
+<td>99-93</td>
+<td style="text-align: left;">A</td>
+</tr>
+<tr class="odd">
+<td>92-90</td>
+<td style="text-align: left;">A-</td>
+</tr>
+<tr class="even">
+<td>89-87</td>
+<td style="text-align: left;">B+</td>
+</tr>
+<tr class="odd">
+<td>86-83</td>
+<td style="text-align: left;">B</td>
+</tr>
+<tr class="even">
+<td>82-80</td>
+<td style="text-align: left;">B-</td>
+</tr>
+<tr class="odd">
+<td>79-77</td>
+<td style="text-align: left;">C+</td>
+</tr>
+<tr class="even">
+<td>76-73</td>
+<td style="text-align: left;">C</td>
+</tr>
+<tr class="odd">
+<td>72-70</td>
+<td style="text-align: left;">C-</td>
+</tr>
+<tr class="even">
+<td>69-60</td>
+<td style="text-align: left;">D</td>
+</tr>
+<tr class="odd">
+<td>Below 60</td>
+<td style="text-align: left;">F</td>
+</tr>
+<tr class="even">
+<td></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="use-of-artificial-intelligence-or-other-technology" class="level2">
+<h2 class="anchored" data-anchor-id="use-of-artificial-intelligence-or-other-technology">Use of Artificial Intelligence or Other Technology</h2>
+<p>This course assumes that work submitted by students—all process work, drafts, low-stakes writing, final versions, and all other submissions—will be generated by the students themselves, working individually. This means that the following would be considered violations of academic integrity: a student has another person/entity do the writing of any substantive portion of an assignment for them, which includes hiring a person or a company to write essays and drafts and/or other assignments, research-based or otherwise, and using artificial intelligence affordances like ChatGPT.</p>
+</section>
+<section id="university-of-iowa-course-policies-and-resources-for-students" class="level2">
+<h2 class="anchored" data-anchor-id="university-of-iowa-course-policies-and-resources-for-students">University of Iowa Course Policies and Resources for Students</h2>
+<ul>
+<li><p>Student Complaint Procedure: <a href="https://education.uiowa.edu/faculty-and-staff-resources/student-complaint-procedure" class="uri">https://education.uiowa.edu/faculty-and-staff-resources/student-complaint-procedure</a></p></li>
+<li><p>College policy on student academic misconduct: <a href="https://education.uiowa.edu/faculty-and-staff-resources/student-academic-misconduct" class="uri">https://education.uiowa.edu/faculty-and-staff-resources/student-academic-misconduct</a></p></li>
+<li><p>University policies <a href="https://provost.uiowa.edu/student-course-policies" class="uri">https://provost.uiowa.edu/student-course-policies</a></p></li>
+</ul>
 
 
 </section>
