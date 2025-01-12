@@ -12,14 +12,15 @@ output: pdf_document
 |------------------------------------|------------------------------------|
 | Instructor: | Jonathan Templin |
 | email: | jonathan-templin\@uiowa.edu |
-| Course website: | TBA |
-| Course repo: | TBA |
+| Course website: | <https://jonathantemplin.github.io/MissingDataMethods2025/> |
+| Course repo: | <https://github.com/jonathantemplin/MissingDataMethods2025> |
 | Course YouTube Playlist: | TBA |
 | Office: | S300A Lindquist Center |
 | Office Phone: | 319-335-6429 |
 | Classroom: | S108 LC |
 | Course Meeting Time: | W 12:30pm-3:20pm |
 | Course Office Hours: | W 10:00am-12:00pm via Zoom at <https://uiowa.zoom.us/my/jonathantemplinuiowa> |
+| Syllabus: | [https://jonathantemplin.github.io/MissingDataMethods2025/s25mdm_syllabus.html](https://jonathantemplin.github.io/MissingDataMethods2025/syllabus/s25mdm_syllabus.html) |
 
 ### Course Objectives, Materials, and Prerequesites
 
