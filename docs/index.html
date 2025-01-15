@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.34">
+<meta name="generator" content="quarto-1.5.45">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,10 +34,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-f23ab18612d661d7bd56dbc0c0fd3817.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-1322888c997fad56b0b4d776d35cf542.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -86,6 +86,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#course-readings" id="toc-course-readings" class="nav-link" data-scroll-target="#course-readings">Course Readings</a></li>
   <li><a href="#course-details" id="toc-course-details" class="nav-link" data-scroll-target="#course-details">Course Details</a></li>
   <li><a href="#current-assignments" id="toc-current-assignments" class="nav-link" data-scroll-target="#current-assignments">Current Assignments</a></li>
+  <li><a href="#lecture-and-class-files-and-links" id="toc-lecture-and-class-files-and-links" class="nav-link" data-scroll-target="#lecture-and-class-files-and-links">Lecture and Class Files and Links</a></li>
+  <li><a href="#remaining-schedule-tentative" id="toc-remaining-schedule-tentative" class="nav-link" data-scroll-target="#remaining-schedule-tentative">Remaining Schedule (Tentative)</a></li>
   </ul>
 </nav>
     </div>
@@ -111,8 +113,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="course-objectives" class="level3">
-<h3 class="anchored" data-anchor-id="course-objectives">Course Objectives</h3>
+<section id="course-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="course-objectives">Course Objectives</h2>
 <p>This course section explores missing data methods in applied statistics, data science, and psychometrics; emphasizing techniques such as multiple imputation, Bayesian methods, and maximum likelihood to handle and analyze incomplete data sets effectively.</p>
 </section>
 <section id="course-readings" class="level2">
@@ -172,13 +174,84 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="current-assignments" class="level2">
 <h2 class="anchored" data-anchor-id="current-assignments">Current Assignments</h2>
-<p>None!</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Assignment</th>
+<th>Due Date</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Read Enders (2022) Chapter 1</td>
+<td>28 Jan</td>
+</tr>
+<tr class="even">
+<td>Complete Reading Assessment 1 (in ICON)</td>
+<td>28 Jan</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lecture-and-class-files-and-links" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-and-class-files-and-links">Lecture and Class Files and Links</h2>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+</style>
+<table style="border-bottom: thin solid;">
+<thead>
+<tr style="border-bottom: thin solid;">
+<th>
+Date
+</th>
+<th>
+Topic
+</th>
+<th>
+Materials
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+22 Jan
+</td>
+<td>
+Introduction to class
+</td>
+<td rowspan="2" valign="top">
+<a href="https://jonathantemplin.github.io/MissingDataMethods2025/syllabus/s25mdm_syllabus.html" target="_blank">Syllabus</a>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr style="border-bottom: thin solid;">
+</tr>
+</tbody>
+</table>
+</section>
+<section id="remaining-schedule-tentative" class="level2">
+<h2 class="anchored" data-anchor-id="remaining-schedule-tentative">Remaining Schedule (Tentative)</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 23%">
 <col style="width: 23%">
 <col style="width: 23%">
-<col style="width: 30%">
+<col style="width: 29%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -192,7 +265,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>1</td>
 <td>22 Jan</td>
-<td>Introduction to Class/Major Types of Missing Data</td>
+<td>Introduction to Class</td>
 <td>None</td>
 </tr>
 <tr class="even">
@@ -374,6 +447,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -484,6 +559,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

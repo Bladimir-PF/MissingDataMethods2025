@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.34">
+<meta name="generator" content="quarto-1.5.45">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-f23ab18612d661d7bd56dbc0c0fd3817.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-1322888c997fad56b0b4d776d35cf542.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -123,7 +123,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#statistical-computing" id="toc-statistical-computing" class="nav-link" data-scroll-target="#statistical-computing">Statistical Computing</a></li>
   </ul></li>
-  <li><a href="#homework-formative-assessments-and-course-project" id="toc-homework-formative-assessments-and-course-project" class="nav-link" data-scroll-target="#homework-formative-assessments-and-course-project">Homework, Formative Assessments, and Course Project</a>
+  <li><a href="#homework-reading-assessments-and-course-project" id="toc-homework-reading-assessments-and-course-project" class="nav-link" data-scroll-target="#homework-reading-assessments-and-course-project">Homework, Reading Assessments, and Course Project</a>
   <ul class="collapse">
   <li><a href="#homework-assignments" id="toc-homework-assignments" class="nav-link" data-scroll-target="#homework-assignments">Homework Assignments</a></li>
   <li><a href="#assigned-reading-assessments" id="toc-assigned-reading-assessments" class="nav-link" data-scroll-target="#assigned-reading-assessments">Assigned Reading Assessments</a></li>
@@ -221,7 +221,7 @@ window.Quarto = {
 </section>
 <section id="course-readings" class="level2">
 <h2 class="anchored" data-anchor-id="course-readings">Course Readings</h2>
-<p>The course will follow the chapters of Applied Missing Data Analysis (2nd Edition) by Craig Enders. The University of Iowa Library has electronic access to the book at <a href="https://ebookcentral-proquest-com.proxy.lib.uiowa.edu/lib/uiowa/detail.action?docID=7027149" class="uri">https://ebookcentral-proquest-com.proxy.lib.uiowa.edu/lib/uiowa/detail.action?docID=7027149</a>. Additional readings will be posted our course ICON site.</p>
+<p>The course will follow the chapters of Applied Missing Data Analysis (2022, 2nd Edition) by Craig Enders. The University of Iowa Library has electronic access to the book at <a href="https://ebookcentral-proquest-com.proxy.lib.uiowa.edu/lib/uiowa/detail.action?docID=7027149" class="uri">https://ebookcentral-proquest-com.proxy.lib.uiowa.edu/lib/uiowa/detail.action?docID=7027149</a>. Additional readings will be posted our course ICON site.</p>
 </section>
 <section id="tentative-course-schedule" class="level2">
 <h2 class="anchored" data-anchor-id="tentative-course-schedule">Tentative Course Schedule</h2>
@@ -230,7 +230,7 @@ window.Quarto = {
 <col style="width: 23%">
 <col style="width: 23%">
 <col style="width: 23%">
-<col style="width: 30%">
+<col style="width: 29%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -359,8 +359,8 @@ window.Quarto = {
 <p>Although this software is available at the University of Iowa, I ask that you install all versions on your local computer as campus resources can be difficult to use for many analyses.</p>
 </section>
 </section>
-<section id="homework-formative-assessments-and-course-project" class="level2">
-<h2 class="anchored" data-anchor-id="homework-formative-assessments-and-course-project">Homework, Formative Assessments, and Course Project</h2>
+<section id="homework-reading-assessments-and-course-project" class="level2">
+<h2 class="anchored" data-anchor-id="homework-reading-assessments-and-course-project">Homework, Reading Assessments, and Course Project</h2>
 <p>Student evaluation will be made based three components: (1) homework assignments (50% of course grade), (2) assigned reading assessments (20% of course grade), and (3) a final examination (30% of course grade).</p>
 <p>Mathematically, the grade percentage can be expressed as:</p>
 <p><span class="math display">\[GP = .5\times HP + .2 \times ARP + .3 \times FP, \]</span> Where:</p>
@@ -547,6 +547,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -657,6 +659,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
