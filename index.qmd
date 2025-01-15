@@ -61,7 +61,10 @@ th, td {
             <td>22 Jan</td>
             <td>Introduction to class</td>
             <td rowspan="2" valign="top">
-                <a href="https://jonathantemplin.github.io/MissingDataMethods2025/syllabus/s25mdm_syllabus.html" target="_blank">Syllabus</a>
+              <ul>
+                <li><a href="https://jonathantemplin.github.io/MissingDataMethods2025/s25mdm_syllabus.html" target="_blank">Syllabus</a></li>
+                <li><a href="https://www.youtube.com" target="_blank">Lecture Video (available after class)</a></li>
+                </ul>
             </td>
         </tr>
         <tr>
