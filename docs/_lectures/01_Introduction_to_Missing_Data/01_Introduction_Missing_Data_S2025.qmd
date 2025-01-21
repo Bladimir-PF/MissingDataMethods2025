@@ -1,0 +1,257 @@
+---
+title: "Introduction to Missing Data Methods Class"
+author: "Lecture 1: January 29, 2025" 
+format: 
+  revealjs:
+    multiplex: false
+    footer: "[https://jonathantemplin.github.io/MissingDataMethods2025/](https://jonathantemplin.github.io/MissingDataMethods2025/)"
+    theme: ["pp.scss"]
+    slide-number: c/t
+    incremental: false
+---
+
+<!-- Planned missing data: Different forms in psychometrics -->
+
+## Learning Objectives
+
+1.  Understand the challenges and implications of missing data in research
+2.  Classify missing data by patterns and mechanisms using Rubin’s framework
+3.  Recognize the limitations of outdated missing data methods
+4.  Explore the design and application of planned missing data methods
+
+# Importance of Missing Data
+
+## Why Missing Data Matters
+
+-   Missing data is pervasive across disciplines (e.g., education, psychology, medicine, political science)
+-   One big example: Polling errors in elections in 2016/2020 seemed to be affected by missing data (MNAR) - Remedies have been subjective at best
+-   Mishandling missing data can:
+    -   Bias results --\> Inaccurate conclusions
+    -   Reduce statistical power
+
+### Modern Methods
+
+-   **Maximum Likelihood (ML):** Estimates parameters directly from observed data likelihood
+-   **Bayesian Estimation:** Combines prior beliefs with data likelihood
+-   **Multiple Imputation (MI):** Reflects uncertainty by filling in missing data with plausible values
+
+Additional note: Methods here typically require full-information analyses (i.e., likelihoods based on the data directly)
+
+## Missing Data Patterns vs. Mechanisms
+
+-   A missing data pattern refers to the configuration of observed and missing values in a data set
+    -   What you observe in data
+-   A missing data mechanism refers to processes that describe different ways in which the probability of missing values relates to the data
+    -   Typically untestable
+    -   What is assumed about data
+-   Patterns describe where the holes are in the data, whereas mech- anisms describe why the values are missing
+
+# Missing Data Patterns
+
+## Types of Missing Data Patterns
+
+::: columns
+::: column
+-   Univariate
+-   Monotone
+-   General
+-   Planned Missingness
+-   Latent Variable
+-   Underidentified
+:::
+
+::: column
+![](img/lecture01/missing_patterns.png){width="600"}
+:::
+:::
+
+## Univariate Pattern
+
+-   Missing values restricted to one variable
+-   Example: Missing outcomes for some participants
+
+## Monotone Pattern
+
+-   Missing data accumulates predictably
+-   Example: Dropout in longitudinal studies
+-   Can be treated without complicated iterative estimation algorithms
+
+## General Pattern
+
+-   Missing data scattered randomly across the dataset
+-   The three contemporary methods (maximum likelihood, Bayesian estimation, and multiple imputation) work well with this configuration
+-   Generally no reason to choose an analytic method based on the missing data pattern alone
+
+## Planned Missingness
+
+-   Variables are intentionally missing for a large proportion of respondents
+-   Can reduce respondent burden and research costs
+-   Often with minimal impact on statistical power
+
+## Latent Variable Pattern
+
+-   Latent variables are essentially missing data
+    -   Presents challenges in secondary analyses
+-   Example: Iowa wishes to understand how well an incoming student's ACT score predicts first year GPA
+    -   ACT Score: An estimate--not an observation
+        -   Can think of scores as single imputation
+
+## Underidentified Pattern
+
+-   Insufficient overlap of data for estimation
+-   Example: Sparse cell counts for categorical variables
+
+# Missing Data Mechanisms
+
+## Hypothetical Data Partitioning: Observed Data
+
+::: columns
+::: column
+-   Before getting to the types of missing data mechanisms, we must first define some notation
+-   Our observed data matrix will be defined as $\mathbf{Y}_{(\text{obs})}$
+-   Here, $\mathbf{Y}_{(\text{obs})} = \left[Y_1, Y_2, Y_3 \right]$
+:::
+
+::: column
+![](img/lecture01/Yobs.png){fig-align="center" width="200"}
+:::
+:::
+
+## Hypothetical Data Partitioning: Complete Data
+
+::: columns
+::: column
+-   Imagine if you could somehow see what the values of the missing data were -- the complete data
+-   Our hypothetical data matrix will be defined as $\mathbf{Y}_{(\text{com})}$ (sometimes denoted $\mathbf{Y}_{(1)}$)
+-   Note: This is not possible through any method and is only a hypothetical example to help define missing data mechanisms
+:::
+
+::: column
+![](img/lecture01/Ycom.png){fig-align="center" width="200"}
+:::
+:::
+
+## Hypothetical Data Partitioning: Missing Data
+
+::: columns
+::: column
+-   Now, take the values that were missing and only create a matrix of those terms
+-   Our hypothetical data matrix will be defined as $\mathbf{Y}_{(\text{mis})}$ (sometimes denoted $\mathbf{Y}_{(0)}$)
+-   Note: Again, this is not possible through any method and is only a hypothetical example to help define missing data mechanisms
+:::
+
+::: column
+![](img/lecture01/Ymis.png){fig-align="center" width="200"}
+:::
+:::
+
+## Rubin’s Framework
+
+::: columns
+::: column
+-   Models that explain whether a participant has missing values
+-   How those tendencies relate to the realized data in $\mathbf{Y}_{(\text{obs})}$ or $\mathbf{Y}_{(\text{mis})}$
+:::
+
+::: column
+![](img/lecture01/Indicators.png){fig-align="center" width="200"}
+:::
+:::
+
+## Missing Completely at Random (MCAR)
+
+-   Missingness unrelated to observed or missing data
+
+$$ P \left( \boldsymbol{M} = 1 \mid \boldsymbol{Y}_() \right) $$
+
+### Missing at Random (MAR)
+
+-   Missingness depends only on observed data: \[ P(M \| Y\_{\text{obs}}, Y\_{\text{mis}}) = P(M \| Y\_{\text{obs}}) \]
+
+### Missing Not at Random (MNAR)
+
+-   Missingness depends on missing data: \[ P(M \| Y\_{\text{obs}}, Y\_{\text{mis}}) \]
+
+------------------------------------------------------------------------
+
+# Outdated Methods
+
+## Common Techniques
+
+### Listwise Deletion
+
+-   Removes all cases with missing data.
+-   Reduces power; biased unless data are MCAR.
+
+### Pairwise Deletion
+
+-   Uses available data for each computation.
+-   Inconsistent sample sizes across analyses.
+
+### Mean Imputation
+
+-   Fills missing values with the mean of observed values: \[ Y\_{i,\text{imputed}} = \bar{Y}\_{\text{obs}} \]
+-   Reduces variance and distorts relationships.
+
+### Regression Imputation
+
+-   Predicts missing values using observed data: \[ Y\_{i,\text{imputed}} = \hat{\beta}\_0 + \hat{\beta}\_1 X_i \]
+-   Overestimates relationships.
+
+------------------------------------------------------------------------
+
+# Planned Missing Data Designs
+
+## Multiform Designs
+
+-   Divide variables into overlapping subsets (forms).
+-   Example: Three-form design:
+
+\[
+
+```{=tex}
+\begin{array}{c|cccc}
+\text{Form} & X & A & B & C \\
+\hline
+1 & O & M & O & O \\
+2 & O & O & M & O \\
+3 & O & O & O & M \\
+\end{array}
+```
+\]
+
+## Wave Missing Data Designs
+
+-   Intentionally missing data at specific time points in longitudinal studies.
+
+------------------------------------------------------------------------
+
+# Practical Example
+
+## Chronic Pain Dataset
+
+-   Variables:
+    -   Depression scores.
+    -   Perceived control over pain.
+
+### Steps
+
+1.  Create missing data indicators ((M_1, M_2, M_3)).
+2.  Test for MCAR using Little’s test: \[ T_L = \sum\_{g=1}\^G n_g (\bar{Y}\_g - \hat{\mu})' \hat{\Sigma}\_g\^{-1} (\bar{Y}\_g - \hat{\mu}) \]
+
+------------------------------------------------------------------------
+
+# Assignments
+
+1.  Analyze a dataset to classify missing data patterns and mechanisms.
+2.  Apply diagnostics to assess the plausibility of MAR.
+
+------------------------------------------------------------------------
+
+# Questions?
+
+Thank you for your attention! Let’s discuss.
+
+------------------------------------------------------------------------
+
+This document is ready for further customization in Quarto. Ensure you run it with proper dependencies for reveal.js presentations.

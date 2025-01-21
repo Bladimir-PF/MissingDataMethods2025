@@ -12,29 +12,30 @@ The course will follow the chapters of Applied Missing Data Analysis (2nd Editio
 
 ## Course Details
 
-|                          |                                                                                                                                                                         |
-|------------------------------------|------------------------------------|
-| Instructor:              | Jonathan Templin                                                                                                                                                        |
-| email:                   | [jonathan-templin\@uiowa.edu](mailto:jonathan-templin@uiowa.edu)                                                                                                        |
-| Course website:          | <https://jonathantemplin.github.io/MissingDataMethods2025/>                                                                                                             |
-| Course repo:             | <https://github.com/jonathantemplin/MissingDataMethods2025>                                                                                                             |
-| Course YouTube Playlist: | TBA                                                                                                                                                                     |
-| Office:                  | S300A Lindquist Center                                                                                                                                                  |
-| Office Phone:            | 319-335-6429                                                                                                                                                            |
-| Classroom:               | S108 LC                                                                                                                                                                 |
-| Course Meeting Time:     | W 12:30pm-3:20pm                                                                                                                                                        |
-| Course Office Hours:     | W 10:00am-12:00pm via Zoom at <https://uiowa.zoom.us/my/jonathantemplinuiowa>                                                                                           |
-| Syllabus:                | [https://jonathantemplin.github.io/MissingDataMethods2025/s25mdm_syllabus.html](https://jonathantemplin.github.io/MissingDataMethods2025/s25mdm_syllabus.html) |
+|                          |                                                                                 |
+|--------------------------|---------------------------------------------------------------------------------|
+| Instructor:              | Jonathan Templin                                                                |
+| email:                   | [jonathan-templin\@uiowa.edu](mailto:jonathan-templin@uiowa.edu)                |
+| Course website:          | <https://jonathantemplin.github.io/MissingDataMethods2025/>                     |
+| Course repo:             | <https://github.com/jonathantemplin/MissingDataMethods2025>                     |
+| Course YouTube Playlist: | TBA                                                                             |
+| Office:                  | S300A Lindquist Center                                                          |
+| Office Phone:            | 319-335-6429                                                                    |
+| Classroom:               | S108 LC                                                                         |
+| Course Meeting Time:     | W 12:30pm-3:20pm                                                                |
+| Course Office Hours:     | W 10:00am-12:00pm via Zoom at <https://uiowa.zoom.us/my/jonathantemplinuiowa>   |
+| Syllabus:                | <https://jonathantemplin.github.io/MissingDataMethods2025/s25mdm_syllabus.html> |
 
 ## Current Assignments
 
-| Assignment | Due Date |
-| -----------|----------|
-| Read Enders (2022) Chapter 1 | 28 Jan |
-| Complete Reading Assessment 1 (in ICON) | 28 Jan |
+| Assignment                              | Due Date |
+|-----------------------------------------|----------|
+| Read Enders (2022) Chapter 1            | 28 Jan   |
+| Complete Reading Assessment 1 (in ICON) | 28 Jan   |
 
 ## Lecture and Class Files and Links
 
+```{=html}
 <style>
 table {
   border-collapse: collapse;
@@ -47,39 +48,23 @@ th, td {
   padding: 16px;
 }
 </style>
-
-<table>
-    <thead>
-        <tr style="border-bottom: thin solid;">
-            <th>Date</th>
-            <th>Topic</th>
-            <th>Materials</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>22 Jan</td>
-            <td>Introduction to class</td>
-            <td rowspan="2" valign="top">
-              <ul>
-                <li><a href="https://jonathantemplin.github.io/MissingDataMethods2025/s25mdm_syllabus.html" target="_blank">Syllabus</a></li>
-                <li><a href="https://www.youtube.com" target="_blank">Lecture Video (available after class)</a></li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
-         <tr style="border-bottom: thin solid;">
-         </tr>
-    </tbody>
-</table>
+```
++--------+-----------------------+-----------------------------------------------------------------------------------------------+
+| Date   | Topic                 | Materials                                                                                     |
++========+=======================+===============================================================================================+
+| 22 Jan | Introduction to class | -   [Syllabus](https://jonathantemplin.github.io/MissingDataMethods2025/s25mdm_syllabus.html) |
+|        |                       |                                                                                               |
+|        |                       | -   [Lecture Video (available after class)](https://www.youtube.com)                          |
++--------+-----------------------+-----------------------------------------------------------------------------------------------+
+|        |                       |                                                                                               |
++--------+-----------------------+-----------------------------------------------------------------------------------------------+
+|        |                       |                                                                                               |
++--------+-----------------------+-----------------------------------------------------------------------------------------------+
 
 ## Remaining Schedule (Tentative)
 
 | Week | Date   | Topic                                                       | Reading                                        |
-|-----------------|-----------------|-----------------|---------------------|
+|------|--------|-------------------------------------------------------------|------------------------------------------------|
 | 2    | 29 Jan | Introduction to Missing Data                                | Chapter 1                                      |
 | 3    | 5 Feb  | Maximum Likelihood Estimation                               | Chapter 2                                      |
 | 4    | 12 Feb | Maximum Likelihood Estimation with Missing Data             | Chapter 3                                      |
