@@ -44,7 +44,7 @@ The course will follow the chapters of Applied Missing Data Analysis (2nd Editio
 | Complete Reading Assessment 1 (in ICON) | 28 Jan   |
 | Read Enders (2022) Chapter 2            | 4 Feb    |
 | Complete Reading Assessment 2 (in ICON) | 4 Feb    |
-| Homework #1                             | 11 Feb   |
+| Homework #1 (Available in ICON)         | 11 Feb   |
 
 ## Lecture and Class Files and Links
 
