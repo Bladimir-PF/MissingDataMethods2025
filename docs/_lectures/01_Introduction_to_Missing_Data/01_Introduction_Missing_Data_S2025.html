@@ -6,9 +6,8 @@
 <script src="01_Introduction_Missing_Data_S2025_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="01_Introduction_Missing_Data_S2025_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="01_Introduction_Missing_Data_S2025_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="01_Introduction_Missing_Data_S2025_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="01_Introduction_Missing_Data_S2025_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.45">
+<link href="01_Introduction_Missing_Data_S2025_files/libs/quarto-html/quarto-syntax-highlighting-f23ab18612d661d7bd56dbc0c0fd3817.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.34">
 
   <meta name="author" content="Lecture 1: January 29, 2025">
   <title>Introduction to Missing Data Methods Class</title>
@@ -29,210 +28,77 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="01_Introduction_Missing_Data_S2025_files/libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="01_Introduction_Missing_Data_S2025_files/libs/revealjs/dist/theme/quarto-16232f29d62c098d89a38a65e10d436d.css">
   <link href="01_Introduction_Missing_Data_S2025_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="01_Introduction_Missing_Data_S2025_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="01_Introduction_Missing_Data_S2025_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
   <link href="01_Introduction_Missing_Data_S2025_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-  <style type="text/css">
-
-  .callout {
-    margin-top: 1em;
-    margin-bottom: 1em;  
-    border-radius: .25rem;
-  }
-
-  .callout.callout-style-simple { 
-    padding: 0em 0.5em;
-    border-left: solid #acacac .3rem;
-    border-right: solid 1px silver;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-    display: flex;
-  }
-
-  .callout.callout-style-default {
-    border-left: solid #acacac .3rem;
-    border-right: solid 1px silver;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-  }
-
-  .callout .callout-body-container {
-    flex-grow: 1;
-  }
-
-  .callout.callout-style-simple .callout-body {
-    font-size: 1rem;
-    font-weight: 400;
-  }
-
-  .callout.callout-style-default .callout-body {
-    font-size: 0.9rem;
-    font-weight: 400;
-  }
-
-  .callout.callout-titled.callout-style-simple .callout-body {
-    margin-top: 0.2em;
-  }
-
-  .callout:not(.callout-titled) .callout-body {
-      display: flex;
-  }
-
-  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
-    padding-left: 1.6em;
-  }
-
-  .callout.callout-titled .callout-header {
-    padding-top: 0.2em;
-    margin-bottom: -0.2em;
-  }
-
-  .callout.callout-titled .callout-title  p {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
-    
-  .callout.callout-titled.callout-style-simple .callout-content  p {
-    margin-top: 0;
-  }
-
-  .callout.callout-titled.callout-style-default .callout-content  p {
-    margin-top: 0.7em;
-  }
-
-  .callout.callout-style-simple div.callout-title {
-    border-bottom: none;
-    font-size: .9rem;
-    font-weight: 600;
-    opacity: 75%;
-  }
-
-  .callout.callout-style-default  div.callout-title {
-    border-bottom: none;
-    font-weight: 600;
-    opacity: 85%;
-    font-size: 0.9rem;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  .callout.callout-style-default div.callout-content {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  .callout.callout-style-simple .callout-icon::before {
-    height: 1rem;
-    width: 1rem;
-    display: inline-block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 1rem 1rem;
-  }
-
-  .callout.callout-style-default .callout-icon::before {
-    height: 0.9rem;
-    width: 0.9rem;
-    display: inline-block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 0.9rem 0.9rem;
-  }
-
-  .callout-title {
-    display: flex
-  }
-    
-  .callout-icon::before {
-    margin-top: 1rem;
-    padding-right: .5rem;
-  }
-
-  .callout.no-icon::before {
-    display: none !important;
-  }
-
-  .callout.callout-titled .callout-body > .callout-content > :last-child {
-    padding-bottom: 0.5rem;
-    margin-bottom: 0;
-  }
-
-  .callout.callout-titled .callout-icon::before {
-    margin-top: .5rem;
-    padding-right: .5rem;
-  }
-
-  .callout:not(.callout-titled) .callout-icon::before {
-    margin-top: 1rem;
-    padding-right: .5rem;
-  }
-
-  /* Callout Types */
-
-  div.callout-note {
-    border-left-color: #4582ec !important;
-  }
-
-  div.callout-note .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
-  }
-
-  div.callout-note.callout-style-default .callout-title {
-    background-color: #dae6fb
-  }
-
-  div.callout-important {
-    border-left-color: #d9534f !important;
-  }
-
-  div.callout-important .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-important.callout-style-default .callout-title {
-    background-color: #f7dddc
-  }
-
-  div.callout-warning {
-    border-left-color: #f0ad4e !important;
-  }
-
-  div.callout-warning .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-warning.callout-style-default .callout-title {
-    background-color: #fcefdc
-  }
-
-  div.callout-tip {
-    border-left-color: #02b875 !important;
-  }
-
-  div.callout-tip .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-tip.callout-style-default .callout-title {
-    background-color: #ccf1e3
-  }
-
-  div.callout-caution {
-    border-left-color: #fd7e14 !important;
-  }
-
-  div.callout-caution .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
-  }
-
-  div.callout-caution.callout-style-default .callout-title {
-    background-color: #ffe5d0
-  }
-
-  </style>
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -337,10 +203,6 @@ Lecture 1: January 29, 2025
 </div>
 
 </section>
-<section class="slide level2">
-
-<!-- Planned missing data: Different forms in psychometrics -->
-</section>
 <section id="learning-objectives" class="slide level2">
 <h2>Learning Objectives</h2>
 <ol type="1">
@@ -366,7 +228,9 @@ Lecture 1: January 29, 2025
 <li>Reduce statistical power</li>
 </ul></li>
 </ul>
-<h3 id="modern-methods">Modern Methods</h3>
+</section>
+<section id="modern-methods" class="slide level2">
+<h2>Modern Methods</h2>
 <ul>
 <li><strong>Maximum Likelihood (ML):</strong> Estimates parameters directly from observed data likelihood</li>
 <li><strong>Bayesian Estimation:</strong> Combines prior beliefs with data likelihood</li>
@@ -407,9 +271,8 @@ Lecture 1: January 29, 2025
 <li>Underidentified</li>
 </ul>
 </div><div class="column">
-<p><img data-src="img/missing_patterns.png"></p>
-</div>
-</div>
+<p><img data-src="img/missing_patterns.png" width="600"></p>
+</div></div>
 </section>
 <section id="univariate-pattern" class="slide level2">
 <h2>Univariate Pattern</h2>
@@ -485,8 +348,7 @@ Lecture 1: January 29, 2025
 <p><img data-src="img/Yobs.png" class="quarto-figure quarto-figure-center" width="200"></p>
 </figure>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="hypothetical-data-partitioning-complete-data" class="slide level2">
 <h2>Hypothetical Data Partitioning: Complete Data</h2>
@@ -500,11 +362,10 @@ Lecture 1: January 29, 2025
 </div><div class="column">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/lecture01/Ycom.png" class="quarto-figure quarto-figure-center" width="200"></p>
+<p><img data-src="img/Ycom.png" class="quarto-figure quarto-figure-center" width="200"></p>
 </figure>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="hypothetical-data-partitioning-missing-data" class="slide level2">
 <h2>Hypothetical Data Partitioning: Missing Data</h2>
@@ -521,8 +382,7 @@ Lecture 1: January 29, 2025
 <p><img data-src="img/Ymis.png" class="quarto-figure quarto-figure-center" width="200"></p>
 </figure>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="rubins-framework" class="slide level2">
 <h2>Rubin’s Framework</h2>
@@ -531,6 +391,7 @@ Lecture 1: January 29, 2025
 <ul>
 <li>Models that explain whether a participant has missing values</li>
 <li>How those tendencies relate to the realized data in <span class="math inline">\(\mathbf{Y}_{(\text{obs})}\)</span> or <span class="math inline">\(\mathbf{Y}_{(\text{mis})}\)</span></li>
+<li>Here, <span class="math inline">\(\mathbf{M} = \left[M_1, M_2, M_3 \right]\)</span></li>
 </ul>
 </div><div class="column">
 <div class="quarto-figure quarto-figure-center">
@@ -538,138 +399,881 @@ Lecture 1: January 29, 2025
 <p><img data-src="img/Indicators.png" class="quarto-figure quarto-figure-center" width="200"></p>
 </figure>
 </div>
+</div></div>
+</section>
+<section id="example-data" class="slide level2">
+<h2>Example Data</h2>
+<div class="columns">
+<div class="column">
+<ul>
+<li>To demonstrate some of the ideas of types of missing data, let’s consider a situation where you have collected two variables:
+<ul>
+<li>IQ scores</li>
+<li>Job performance</li>
+</ul></li>
+<li>Imagine you are an employer looking to hire employees for a job where IQ is important</li>
+</ul>
+</div><div class="column">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>    IQ perfC
+1   78     9
+2   84    13
+3   84    10
+4   85     8
+5   87     7
+6   91     7
+7   92     9
+8   94     9
+9   94    11
+10  96     7
+11  99     7
+12 105    10
+13 105    11
+14 106    15
+15 108    10
+16 112    10
+17 113    12
+18 115    14
+19 118    16
+20 134    12</code></pre>
 </div>
 </div>
+</div></div>
+</section></section>
+<section>
+<section id="missing-data-mechanisms-1" class="title-slide slide level1 center">
+<h1>Missing Data Mechanisms</h1>
+
+</section>
+<section id="missing-data-mechanisms-2" class="slide level2">
+<h2>Missing Data Mechanisms</h2>
+<p>A very rough typology of missing data puts missing observations into three categories:</p>
+<ul>
+<li>Missing Completely At Random (MCAR)</li>
+<li>Missing At Random (MAR)</li>
+<li>Missing Not At Random (MNAR)</li>
+</ul>
 </section>
 <section id="missing-completely-at-random-mcar" class="slide level2">
-<h2>Missing Completely at Random (MCAR)</h2>
+<h2>Missing Completely At Random (MCAR)</h2>
 <ul>
-<li>Missingness unrelated to observed or missing data</li>
-</ul>
-<p><span class="math display">\[ P \left( \boldsymbol{M} = 1 \mid \boldsymbol{Y}_() \right) \]</span></p>
-<h3 id="missing-at-random-mar">Missing at Random (MAR)</h3>
+<li>Missing data are MCAR if the events that lead to missingness are independent of:
 <ul>
-<li>Missingness depends only on observed data: [ P(M | Y_{}, Y_{}) = P(M | Y_{}) ]</li>
-</ul>
-<h3 id="missing-not-at-random-mnar">Missing Not at Random (MNAR)</h3>
+<li>The observed variables</li>
+<li><em>-and-</em></li>
+<li>The unobserved parameters of interest</li>
+</ul></li>
+<li>Examples:
 <ul>
-<li>Missingness depends on missing data: [ P(M | Y_{}, Y_{}) ]</li>
-</ul>
-</section>
-<section class="slide level2">
-
-</section></section>
-<section>
-<section id="outdated-methods" class="title-slide slide level1 center">
-<h1>Outdated Methods</h1>
-
-</section>
-<section id="common-techniques" class="slide level2">
-<h2>Common Techniques</h2>
-<h3 id="listwise-deletion">Listwise Deletion</h3>
+<li>Planned missingness in survey research
 <ul>
-<li>Removes all cases with missing data.</li>
-<li>Reduces power; biased unless data are MCAR.</li>
-</ul>
-<h3 id="pairwise-deletion">Pairwise Deletion</h3>
-<ul>
-<li>Uses available data for each computation.</li>
-<li>Inconsistent sample sizes across analyses.</li>
-</ul>
-<h3 id="mean-imputation">Mean Imputation</h3>
-<ul>
-<li>Fills missing values with the mean of observed values: [ Y_{i,} = {Y}_{} ]</li>
-<li>Reduces variance and distorts relationships.</li>
-</ul>
-<h3 id="regression-imputation">Regression Imputation</h3>
-<ul>
-<li>Predicts missing values using observed data: [ Y_{i,} = _0 + _1 X_i ]</li>
-<li>Overestimates relationships.</li>
-</ul>
-</section>
-<section class="slide level2">
-
-</section></section>
-<section>
-<section id="planned-missing-data-designs" class="title-slide slide level1 center">
-<h1>Planned Missing Data Designs</h1>
-
-</section>
-<section id="multiform-designs" class="slide level2">
-<h2>Multiform Designs</h2>
-<ul>
-<li>Divide variables into overlapping subsets (forms).</li>
-<li>Example: Three-form design:</li>
-</ul>
-<p>[</p>
-<span class="math display">\[\begin{array}{c|cccc}
-\text{Form} &amp; X &amp; A &amp; B &amp; C \\
-\hline
-1 &amp; O &amp; M &amp; O &amp; O \\
-2 &amp; O &amp; O &amp; M &amp; O \\
-3 &amp; O &amp; O &amp; O &amp; M \\
-\end{array}\]</span>
-<p>]</p>
-</section>
-<section id="wave-missing-data-designs" class="slide level2">
-<h2>Wave Missing Data Designs</h2>
-<ul>
-<li>Intentionally missing data at specific time points in longitudinal studies.</li>
-</ul>
-</section>
-<section class="slide level2">
-
-</section></section>
-<section>
-<section id="practical-example" class="title-slide slide level1 center">
-<h1>Practical Example</h1>
-
-</section>
-<section id="chronic-pain-dataset" class="slide level2">
-<h2>Chronic Pain Dataset</h2>
-<ul>
-<li>Variables:
-<ul>
-<li>Depression scores.</li>
-<li>Perceived control over pain.</li>
+<li>Some large-scale tests are sampled using booklets</li>
+<li>Students receive only a few of the total number of items</li>
+<li>The items not received are treated as missing – but that is completely a function of sampling and no other mechanism</li>
+</ul></li>
 </ul></li>
 </ul>
-<h3 id="steps">Steps</h3>
-<ol type="1">
-<li>Create missing data indicators ((M_1, M_2, M_3)).</li>
-<li>Test for MCAR using Little’s test: [ T_L = _{g=1}^G n_g ({Y}_g - )’ _g^{-1} ({Y}_g - ) ]</li>
-</ol>
 </section>
-<section class="slide level2">
+<section id="a-formal-mcar-definition" class="slide level2">
+<h2>A Formal MCAR Definition</h2>
+<p>Formally, we note that data are MCAR if the probability of the data being missing is independent of the observed data <span class="math inline">\(\mathbf{Y}_{(obs)}\)</span> and the missing data <span class="math inline">\(\mathbf{Y}_{(mis)}\)</span>:</p>
+<p><span class="math display">\[Pr \left(\mathbf{M} = 1 \mid \mathbf{Y}_{(obs)}, \mathbf{Y}_{(mis)}, \boldsymbol{\phi} \right) = Pr \left(\mathbf{M} = 1 \mid  \boldsymbol{\phi} \right)\]</span></p>
+<ul>
+<li>Here, <span class="math inline">\(\boldsymbol{\phi}\)</span> are model parameters that define the overall probabilities of missing data</li>
+<li>Like saying a missing observation is due to pure randomness (such as missing if a coin flipped falls on heads)</li>
+</ul>
+</section>
+<section id="implications-of-mcar" class="slide level2">
+<h2>Implications of MCAR</h2>
+<ul>
+<li>Because the mechanism of missing is not due to anything other than chance, inclusion of MCAR in data will not bias your results
+<ul>
+<li>Can use methods based on listwise deletion, multiple imputation, or maximum likelihood</li>
+</ul></li>
+<li>Your effective sample size is lowered, though
+<ul>
+<li>Less power, less efficiency</li>
+</ul></li>
+</ul>
+</section>
+<section id="mcar-data" class="slide level2">
+<h2>MCAR Data</h2>
+<div class="columns">
+<div class="column">
+<p>Missing data are dispersed randomly throughout data</p>
+</div><div class="column">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>    IQ perfMCAR
+1   78       NA
+2   84       13
+3   84       NA
+4   85        8
+5   87        7
+6   91        7
+7   92        9
+8   94        9
+9   94       11
+10  96       NA
+11  99        7
+12 105       10
+13 105       11
+14 106       15
+15 108       10
+16 112       NA
+17 113       12
+18 115       14
+19 118       16
+20 134       NA</code></pre>
+</div>
+</div>
+</div></div>
+</section>
+<section id="mcar-vs.-complete-data-comparison" class="slide level2">
+<h2>MCAR vs.&nbsp;Complete Data Comparison</h2>
+<div class="columns">
+<div class="column">
+<p>Complete Data</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>lavaan 0.6-19 ended normally after 20 iterations
 
+  Estimator                                         ML
+  Optimization method                           NLMINB
+  Number of model parameters                         5
+
+  Number of observations                            20
+
+Model Test User Model:
+                                                      
+  Test statistic                                 0.000
+  Degrees of freedom                                 0
+
+Parameter Estimates:
+
+  Standard errors                             Standard
+  Information                                 Expected
+  Information saturated (h1) model          Structured
+
+Covariances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+  IQ ~~                                                                 
+    perfC            19.500    9.151    2.131    0.033   19.500    0.542
+
+Intercepts:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+    IQ              100.000    3.079   32.478    0.000  100.000    7.262
+    perfC            10.350    0.584   17.714    0.000   10.350    3.961
+
+Variances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+    IQ              189.600   59.957    3.162    0.002  189.600    1.000
+    perfC             6.828    2.159    3.162    0.002    6.828    1.000</code></pre>
+</div>
+</div>
+</div><div class="column">
+<p>MAR Data</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>lavaan 0.6-19 ended normally after 20 iterations
+
+  Estimator                                         ML
+  Optimization method                           NLMINB
+  Number of model parameters                         5
+
+  Number of observations                            15
+
+Model Test User Model:
+                                                      
+  Test statistic                                 0.000
+  Degrees of freedom                                 0
+
+Parameter Estimates:
+
+  Standard errors                             Standard
+  Information                                 Expected
+  Information saturated (h1) model          Structured
+
+Covariances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+  IQ ~~                                                                 
+    perfMCAR         19.360    9.299    2.082    0.037   19.360    0.638
+
+Intercepts:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+    IQ               99.733    2.777   35.916    0.000   99.733    9.274
+    perfMCAR         10.600    0.729   14.539    0.000   10.600    3.754
+
+Variances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+    IQ              115.662   42.234    2.739    0.006  115.662    1.000
+    perfMCAR          7.973    2.911    2.739    0.006    7.973    1.000</code></pre>
+</div>
+</div>
+</div></div>
+</section>
+<section id="missing-at-random-definition" class="slide level2">
+<h2>Missing at Random Definition</h2>
+<p>Formally, we note that data are MAR if the probability of the data being missing is related to the observed data <span class="math inline">\(\mathbf{Y}_{(obs)}\)</span> but not the missing data <span class="math inline">\(\mathbf{Y}_{(mis)}\)</span>:</p>
+<p><span class="math display">\[Pr \left(\mathbf{M} = 1 \mid \mathbf{Y}_{(obs)}, \mathbf{Y}_{(mis)}, \boldsymbol{\phi} \right) = Pr \left(\mathbf{M} = 1 \mid  \mathbf{Y}_{(obs)}, \boldsymbol{\phi} \right)\]</span></p>
+<ul>
+<li>Again, <span class="math inline">\(\boldsymbol{\phi}\)</span> are model parameters that define the overall probabilities of missing data</li>
+<li>Like saying a missing observation is due to pure randomness (such as missing if a coin flipped falls on heads)</li>
+</ul>
+</section>
+<section id="mar-data" class="slide level2">
+<h2>MAR Data</h2>
+<div class="columns">
+<div class="column">
+<p>Missing data are related to other data:</p>
+<ul>
+<li>Any IQ less than 90 did not have a performance variable
+<ul>
+<li>Could be that anyone with an IQ of 90 or less was not hired</li>
+<li>Not hired means not having job performance data</li>
+</ul></li>
+</ul>
+</div><div class="column">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>    IQ perfMAR
+1   78      NA
+2   84      NA
+3   84      NA
+4   85      NA
+5   87      NA
+6   91       7
+7   92       9
+8   94       9
+9   94      11
+10  96       7
+11  99       7
+12 105      10
+13 105      11
+14 106      15
+15 108      10
+16 112      10
+17 113      12
+18 115      14
+19 118      16
+20 134      12</code></pre>
+</div>
+</div>
+</div></div>
+</section>
+<section id="implications-of-mar" class="slide level2">
+<h2>Implications of MAR</h2>
+<ul>
+<li>If data are missing at random, biased results could occur</li>
+<li>Inferences based on listwise deletion will be biased and inefficient
+<ul>
+<li>Fewer data points = more error in analysis</li>
+</ul></li>
+<li>Inferences based on maximum likelihood will be unbiased but inefficient</li>
+<li>The first eight chapters of the book focus on methods for MAR data</li>
+</ul>
+</section>
+<section id="mar-vs.-complete-data-comparison" class="slide level2">
+<h2>MAR vs.&nbsp;Complete Data Comparison</h2>
+<div class="columns">
+<div class="column">
+<p>Complete Data</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>lavaan 0.6-19 ended normally after 20 iterations
+
+  Estimator                                         ML
+  Optimization method                           NLMINB
+  Number of model parameters                         5
+
+  Number of observations                            20
+
+Model Test User Model:
+                                                      
+  Test statistic                                 0.000
+  Degrees of freedom                                 0
+
+Parameter Estimates:
+
+  Standard errors                             Standard
+  Information                                 Expected
+  Information saturated (h1) model          Structured
+
+Covariances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+  IQ ~~                                                                 
+    perfC            19.500    9.151    2.131    0.033   19.500    0.542
+
+Intercepts:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+    IQ              100.000    3.079   32.478    0.000  100.000    7.262
+    perfC            10.350    0.584   17.714    0.000   10.350    3.961
+
+Variances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+    IQ              189.600   59.957    3.162    0.002  189.600    1.000
+    perfC             6.828    2.159    3.162    0.002    6.828    1.000</code></pre>
+</div>
+</div>
+</div><div class="column">
+<p>MAR Data</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>lavaan 0.6-19 ended normally after 21 iterations
+
+  Estimator                                         ML
+  Optimization method                           NLMINB
+  Number of model parameters                         5
+
+  Number of observations                            15
+
+Model Test User Model:
+                                                      
+  Test statistic                                 0.000
+  Degrees of freedom                                 0
+
+Parameter Estimates:
+
+  Standard errors                             Standard
+  Information                                 Expected
+  Information saturated (h1) model          Structured
+
+Covariances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+  IQ ~~                                                                 
+    perfMAR          19.489    9.413    2.070    0.038   19.489    0.633
+
+Intercepts:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+    IQ              105.467    2.947   35.791    0.000  105.467    9.241
+    perfMAR          10.667    0.697   15.302    0.000   10.667    3.951
+
+Variances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+    IQ              130.249   47.560    2.739    0.006  130.249    1.000
+    perfMAR           7.289    2.662    2.739    0.006    7.289    1.000</code></pre>
+</div>
+</div>
+</div></div>
+</section>
+<section id="missing-not-at-random-mnar-definition" class="slide level2">
+<h2>Missing Not At Random (MNAR) Definition</h2>
+<p>Formally, we note that data are MNAR if the probability of the data being missing is related to the observed data <span class="math inline">\(\mathbf{Y}_{(obs)}\)</span> and the missing data <span class="math inline">\(\mathbf{Y}_{(mis)}\)</span>:</p>
+<p><span class="math display">\[Pr \left(\mathbf{M} = 1 \mid \mathbf{Y}_{(obs)}, \mathbf{Y}_{(mis)}, \boldsymbol{\phi} \right)\]</span></p>
+<ul>
+<li>Again, <span class="math inline">\(\boldsymbol{\phi}\)</span> are model parameters that define the overall probabilities of missing data</li>
+</ul>
+<p>Often called non-ignorable missingness</p>
+<ul>
+<li>Inferences based on listwise deletion or maximum likelihood will be biased and inefficient</li>
+<li>Need to provide statistical model for missing data simultaneously with estimation of original model</li>
+</ul>
 </section></section>
 <section>
-<section id="assignments" class="title-slide slide level1 center">
-<h1>Assignments</h1>
-<ol type="1">
-<li>Analyze a dataset to classify missing data patterns and mechanisms.</li>
-<li>Apply diagnostics to assess the plausibility of MAR.</li>
-</ol>
-</section>
-<section class="slide level2">
+<section id="surviving-missing-data-a-brief-guide" class="title-slide slide level1 center">
+<h1>Surviving Missing data: A Brief Guide</h1>
 
+</section>
+<section id="using-statistical-methods-with-missing-data" class="slide level2">
+<h2>Using Statistical Methods with Missing Data</h2>
+<ul>
+<li>Missing data can alter your analysis results dramatically depending upon:
+<ul>
+<li>1. The type of missing data</li>
+<li>2. The type of analysis algorithm</li>
+</ul></li>
+<li>The choice of an algorithm and missing data method is important in avoiding issues due to missing data</li>
+</ul>
+</section>
+<section id="the-worst-case-scenario-mnar" class="slide level2">
+<h2>The Worst Case Scenario: MNAR</h2>
+<ul>
+<li>The worst case scenario is when data are MNAR: missing not at random
+<ul>
+<li>Non-ignorable missing</li>
+</ul></li>
+<li>You cannot easily get out of this mess
+<ul>
+<li>Instead you have to be clairvoyant</li>
+</ul></li>
+<li>Analyses algorithms must incorporate models for missing data
+<ul>
+<li>And these models must also be right</li>
+</ul></li>
+</ul>
+</section>
+<section id="the-reality" class="slide level2">
+<h2>The Reality</h2>
+<ul>
+<li>In most empirical studies, MNAR as a condition is an afterthought</li>
+<li>It is impossible to know definitively if data truly are MNAR
+<ul>
+<li>So data are treated as MAR or MCAR</li>
+</ul></li>
+<li>Hypothesis tests do exist for MCAR (i.e., Little’s test)
+<ul>
+<li>But, often this test is rejected</li>
+</ul></li>
+</ul>
+</section>
+<section id="the-best-case-scenario-mcar" class="slide level2">
+<h2>The Best Case Scenario: MCAR</h2>
+<ul>
+<li>Under MCAR, pretty much anything you do with your data will give you the “right” (unbiased) estimates of your model parameters</li>
+<li>MCAR is very unlikely to occur
+<ul>
+<li>In practice, MCAR is treated as equally unlikely as MNAR</li>
+</ul></li>
+</ul>
+</section>
+<section id="the-middle-ground-mar" class="slide level2">
+<h2>The Middle Ground: MAR</h2>
+<ul>
+<li>MAR is the common compromise used in most empirical research
+<ul>
+<li>Under MAR, maximum likelihood algorithms are unbiased</li>
+</ul></li>
+<li>Maximum likelihood is for many methods:
+<ul>
+<li>Linear mixed models i</li>
+<li>Models with “latent” random effects (CFA/SEM models)</li>
+</ul></li>
+</ul>
 </section></section>
 <section>
-<section id="questions" class="title-slide slide level1 center">
-<h1>Questions?</h1>
-<p>Thank you for your attention! Let’s discuss.</p>
-</section>
-<section class="slide level2">
+<section id="outdated-methods-for-handling-missing-data" class="title-slide slide level1 center">
+<h1>Outdated Methods for Handling Missing Data</h1>
 
-<p>This document is ready for further customization in Quarto. Ensure you run it with proper dependencies for reveal.js presentations.</p>
-<div class="quarto-auto-generated-content">
+</section>
+<section id="bad-ways-to-handle-missing-data" class="slide level2">
+<h2>Bad Ways to Handle Missing Data</h2>
+<ul>
+<li>Dealing with missing data is important, as the mechanisms you choose can dramatically alter your results</li>
+<li>This point was not fully realized when the first methods for missing data were created
+<ul>
+<li>Each of the methods described in this section should <em>never be used</em></li>
+<li>Given to show perspective – and to allow you to understand what happens if you were to choose each</li>
+</ul></li>
+</ul>
+</section>
+<section id="deletion-methods" class="slide level2">
+<h2>Deletion Methods</h2>
+<ul>
+<li>Deletion methods are just that: methods that handle missing data by deleting observations
+<ul>
+<li>Listwise deletion: delete the entire observation if any values are missing</li>
+<li>Pairwise deletion: delete a pair of observations if either of the values are missing</li>
+</ul></li>
+<li>Assumptions: Data are MCAR</li>
+<li>Limitations:
+<ul>
+<li>Reduction in statistical power if MCAR</li>
+<li>Biased estimates if MAR or MNAR</li>
+</ul></li>
+</ul>
+</section>
+<section id="listwise-deletion" class="slide level2">
+<h2>Listwise Deletion</h2>
+<ul>
+<li>Listwise deletion discards <em>all</em> of the data from an observation if one or more variables are missing</li>
+<li>Most frequently used in statistical software packages that are not optimizing a likelihood function (need ML)</li>
+<li>In linear models:
+<ul>
+<li>R lm() list-wise deletes cases where <strong>DVs</strong> are missing</li>
+</ul></li>
+</ul>
+</section>
+<section id="listwise-deletion-example-mcar" class="slide level2">
+<h2>Listwise Deletion Example: MCAR</h2>
+<div class="columns">
+<div class="column">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Parameter Estimates:
+
+  Standard errors                             Standard
+  Information                                 Expected
+  Information saturated (h1) model          Structured
+
+Regressions:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+  perfC ~                                             
+    IQ                0.103    0.036    2.884    0.004
+
+Intercepts:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+   .perfC             0.065    3.600    0.018    0.986
+
+Variances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+   .perfC             4.822    1.525    3.162    0.002</code></pre>
+</div>
+</div>
+</div><div class="column">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Parameter Estimates:
+
+  Standard errors                             Standard
+  Information                                 Expected
+  Information saturated (h1) model          Structured
+
+Regressions:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+  perfMCAR ~                                          
+    IQ                0.167    0.052    3.205    0.001
+
+Intercepts:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+   .perfMCAR         -6.094    5.239   -1.163    0.245
+
+Variances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+   .perfMCAR          4.733    1.728    2.739    0.006</code></pre>
+</div>
+</div>
+</div></div>
+</section>
+<section id="listwise-deletion-example-mar" class="slide level2">
+<h2>Listwise Deletion Example: MAR</h2>
+<div class="columns">
+<div class="column">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Parameter Estimates:
+
+  Standard errors                             Standard
+  Information                                 Expected
+  Information saturated (h1) model          Structured
+
+Regressions:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+  perfC ~                                             
+    IQ                0.103    0.036    2.884    0.004
+
+Intercepts:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+   .perfC             0.065    3.600    0.018    0.986
+
+Variances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+   .perfC             4.822    1.525    3.162    0.002</code></pre>
+</div>
+</div>
+</div><div class="column">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Parameter Estimates:
+
+  Standard errors                             Standard
+  Information                                 Expected
+  Information saturated (h1) model          Structured
+
+Regressions:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+  perfMAR ~                                           
+    IQ                0.150    0.047    3.163    0.002
+
+Intercepts:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+   .perfMAR          -5.114    5.019   -1.019    0.308
+
+Variances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+   .perfMAR           4.373    1.597    2.739    0.006</code></pre>
+</div>
+</div>
+</div></div>
+</section>
+<section id="pairwise-deletion" class="slide level2">
+<h2>Pairwise Deletion</h2>
+<ul>
+<li>Pairwise deletion discards a pair of observations if either one is missing
+<ul>
+<li>Different from listwise: uses more data (rest of data not thrown out)</li>
+</ul></li>
+<li>Assumes: MCAR</li>
+<li>Limitations:
+<ul>
+<li>Reduction in statistical power if MCAR</li>
+<li>Biased estimates if MAR or MNAR</li>
+</ul></li>
+<li>Can be an issue when forming covariance/correlation matrices
+<ul>
+<li>May make them non-invertible, problem if used as input into statistical procedures</li>
+</ul></li>
+</ul>
+</section>
+<section id="pairwise-deletion-example" class="slide level2">
+<h2>Pairwise Deletion Example</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href=""></a><span class="fu">cor</span>(jobPerf, <span class="at">use=</span><span class="st">"pairwise.complete.obs"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                IQ     perfC  perfMCAR   perfMAR
+IQ       1.0000000 0.5419817 0.6375139 0.6325129
+perfC    0.5419817 1.0000000 1.0000000 1.0000000
+perfMCAR 0.6375139 1.0000000 1.0000000 1.0000000
+perfMAR  0.6325129 1.0000000 1.0000000 1.0000000</code></pre>
+</div>
+</div>
+</section>
+<section id="single-imputation-methods" class="slide level2">
+<h2>Single Imputation Methods</h2>
+<ul>
+<li><strong>Single imputation </strong> methods replace missing data with some type of value
+<ul>
+<li><em>Single:</em> one value used</li>
+<li><em>Imputation:</em> replace missing data with value</li>
+</ul></li>
+<li>Upside: can use entire data set if missing values are replaced</li>
+<li>Downside: biased parameter estimates and standard errors (even if missing is MCAR)
+<ul>
+<li>Type-I error issues</li>
+</ul></li>
+<li>Still: never use these techniques</li>
+</ul>
+</section>
+<section id="unconditional-mean-imputation" class="slide level2">
+<h2>Unconditional Mean Imputation</h2>
+<ul>
+<li>Unconditional mean imputation replaces the missing values of a variable with its estimated mean
+<ul>
+<li>Unconditional = mean value without any input from other variables</li>
+</ul></li>
+</ul>
+</section>
+<section id="unconditional-mean-imputation-mcar-data-vs-complete-data" class="slide level2">
+<h2>Unconditional Mean Imputation: MCAR Data vs Complete Data</h2>
+<div class="columns">
+<div class="column">
+<p>Complete</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = IQ ~ perfC, data = jobPerf)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-23.569  -7.425   1.216   6.572  29.287 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)   70.439     11.143   6.322 5.87e-06 ***
+perfC          2.856      1.044   2.736   0.0136 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 12.2 on 18 degrees of freedom
+Multiple R-squared:  0.2937,    Adjusted R-squared:  0.2545 
+F-statistic: 7.487 on 1 and 18 DF,  p-value: 0.01357</code></pre>
+</div>
+</div>
+</div><div class="column">
+<p>MCAR</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = IQ ~ perfMCAR_meanImpute, data = jobPerf)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-22.000  -5.256  -1.187   6.994  34.000 
+
+Coefficients:
+                    Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)           74.262     13.026   5.701 2.09e-05 ***
+perfMCAR_meanImpute    2.428      1.197   2.028   0.0577 .  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 13.1 on 18 degrees of freedom
+Multiple R-squared:  0.1859,    Adjusted R-squared:  0.1407 
+F-statistic: 4.112 on 1 and 18 DF,  p-value: 0.05766</code></pre>
+</div>
+</div>
+</div></div>
+</section>
+<section id="unconditional-mean-imputation-mar-data-vs-complete-data" class="slide level2">
+<h2>Unconditional Mean Imputation: MAR Data vs Complete Data</h2>
+<div class="columns">
+<div class="column">
+<p>Complete</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = IQ ~ perfC, data = jobPerf)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-23.569  -7.425   1.216   6.572  29.287 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)   70.439     11.143   6.322 5.87e-06 ***
+perfC          2.856      1.044   2.736   0.0136 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 12.2 on 18 degrees of freedom
+Multiple R-squared:  0.2937,    Adjusted R-squared:  0.2545 
+F-statistic: 7.487 on 1 and 18 DF,  p-value: 0.01357</code></pre>
+</div>
+</div>
+</div><div class="column">
+<p>MAR</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = IQ ~ perfMAR_meanImpute, data = jobPerf)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-22.000  -8.418   2.272   7.288  30.435 
+
+Coefficients:
+                   Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)          71.480     13.506   5.293 4.95e-05 ***
+perfMAR_meanImpute    2.674      1.237   2.162   0.0443 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 12.93 on 18 degrees of freedom
+Multiple R-squared:  0.2061,    Adjusted R-squared:  0.162 
+F-statistic: 4.674 on 1 and 18 DF,  p-value: 0.04434</code></pre>
+</div>
+</div>
+</div></div>
+</section></section>
+<section id="conditional-mean-imputation-regression" class="title-slide slide level1 center">
+<h1>Conditional Mean Imputation (Regression)</h1>
+<ul>
+<li>Conditional mean imputation uses regression analyses to impute missing values
+<ul>
+<li>The missing values are imputed using the predicted values in each regression (conditional means)</li>
+</ul></li>
+<li>For our data we would form regressions for each outcome using the other variables
+<ul>
+<li>PERF = β01 + β11*IQ</li>
+</ul></li>
+<li>More accurate than unconditional mean imputation
+<ul>
+<li>But still provides biased parameters and SEs</li>
+</ul></li>
+</ul>
+</section>
+
+<section id="stochastic-conditional-mean-imputation" class="title-slide slide level1 center">
+<h1>Stochastic Conditional Mean Imputation</h1>
+<ul>
+<li>Stochastic conditional mean imputation adds a random component to the imputation
+<ul>
+<li>Representing the error term in each regression equation</li>
+<li>Assumes MAR rather than MCAR</li>
+</ul></li>
+<li>Better than any other of these methods (and the basis for multiple imputation)</li>
+</ul>
+</section>
+
+<section id="imputation-by-proximity-hot-deck-matching" class="title-slide slide level1 center">
+<h1>Imputation by Proximity: Hot Deck Matching</h1>
+<ul>
+<li>Hot deck matching uses real data – from other observations as its basis for imputing</li>
+<li>Observations are “matched” using similar scores on variables in the data set
+<ul>
+<li>Imputed values come directly from matched observations</li>
+</ul></li>
+<li>Upside: Helps to preserve univariate distributions; gives data in an appropriate range</li>
+<li>Downside: biased estimates (especially of regression coefficients), too-small standard errors</li>
+</ul>
+</section>
+
+<section id="scale-imputation-by-averaging" class="title-slide slide level1 center">
+<h1>Scale Imputation by Averaging</h1>
+<ul>
+<li>In psychometric tests, a common method of imputation has been to use a scale average rather than total score
+<ul>
+<li>Can re-scale to total score by taking # items * average score</li>
+</ul></li>
+<li>Problem: treating missing items this way is like using person mean
+<ul>
+<li>Reduces standard errors</li>
+<li>Makes calculation of reliability biased</li>
+</ul></li>
+</ul>
+</section>
+
+<section id="longitudinal-imputation-last-observation-carried-forward" class="title-slide slide level1 center">
+<h1>Longitudinal Imputation: Last Observation Carried Forward</h1>
+<ul>
+<li>A commonly used imputation method in longitudinal data has been to treat observations that dropped out by carrying forward thelast observation
+<ul>
+<li>More common in medical studies and clinical trials</li>
+</ul></li>
+<li>Assumes scores do not change after dropout – bad idea
+<ul>
+<li>Thought to be conservative</li>
+</ul></li>
+<li>Can exaggerate group differences
+<ul>
+<li>Limits standard errors that help detect group differences</li>
+</ul></li>
+</ul>
+</section>
+
+<section id="why-single-imputation-is-bad-science" class="title-slide slide level1 center">
+<h1>Why Single Imputation Is Bad Science</h1>
+<ul>
+<li>Overall, the methods described in this section are not useful for handling missing data</li>
+<li>If you use them you will likely get a statistical answer that is an artifact
+<ul>
+<li>Actual estimates you interpret (parameter estimates) will be biased (in either direction)</li>
+<li>Standard errors will be too small
+<ul>
+<li>Leads to Type-I Errors</li>
+</ul></li>
+</ul></li>
+<li>Putting this together: you will likely end up making conclusions about your data that are wrong</li>
+</ul>
+</section>
+
+<section id="wrapping-up" class="title-slide slide level1 center">
+<h1>Wrapping Up</h1>
+
+</section>
+
+<section id="lecture-summary" class="title-slide slide level1 center">
+<h1>Lecture Summary</h1>
+<ul>
+<li>Missing data are common in statistical analyses</li>
+<li>They are frequently neglected
+<ul>
+<li>MNAR: hard to model missing data and observed data simultaneously</li>
+<li>MCAR: doesn’t often happen</li>
+<li>MAR: most missing imputation assumes MVN</li>
+</ul></li>
+<li>More often than not, ML is the best choice
+<ul>
+<li>Software is getting better at handling missing data</li>
+<li>We will discuss how ML works next week</li>
+</ul></li>
+</ul>
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
 <p><a href="https://jonathantemplin.github.io/MissingDataMethods2025/">https://jonathantemplin.github.io/MissingDataMethods2025/</a></p>
 </div>
-</div>
-</section></section>
-    </div>
-  </div>
+</div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
   <script src="01_Introduction_Missing_Data_S2025_files/libs/revealjs/dist/reveal.js"></script>
@@ -698,7 +1302,8 @@ Lecture 1: January 29, 2025
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -852,7 +1457,7 @@ Lecture 1: January 29, 2025
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -878,6 +1483,44 @@ Lecture 1: January 29, 2025
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
@@ -957,8 +1600,6 @@ Lecture 1: January 29, 2025
       });
       clipboard.on('success', onCopySuccess);
       if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        // For code content inside modals, clipBoardJS needs to be initialized with a container option
-        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
         const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
           text: getTextToCopy,
           container: window.document.getElementById('quarto-embedded-source-code-modal')
