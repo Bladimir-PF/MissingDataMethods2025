@@ -61,7 +61,7 @@ Additional note: Methods here typically require full-information analyses (i.e.,
 :::
 
 ::: column
-![](img/lecture01/missing_patterns.png){width="600"}
+![](img/missing_patterns.png)
 :::
 :::
 
@@ -113,7 +113,7 @@ Additional note: Methods here typically require full-information analyses (i.e.,
 :::
 
 ::: column
-![](img/lecture01/Yobs.png){fig-align="center" width="200"}
+![](img/Yobs.png){fig-align="center" width="200"}
 :::
 :::
 
@@ -141,7 +141,7 @@ Additional note: Methods here typically require full-information analyses (i.e.,
 :::
 
 ::: column
-![](img/lecture01/Ymis.png){fig-align="center" width="200"}
+![](img/Ymis.png){fig-align="center" width="200"}
 :::
 :::
 
@@ -154,10 +154,16 @@ Additional note: Methods here typically require full-information analyses (i.e.,
 :::
 
 ::: column
-![](img/lecture01/Indicators.png){fig-align="center" width="200"}
+![](img/Indicators.png){fig-align="center" width="200"}
 :::
 :::
 
+## Example Data
+
+```{r importData}
+painData = read.table(file = "pain.dat")
+
+```
 ## Missing Completely at Random (MCAR)
 
 -   Missingness unrelated to observed or missing data
