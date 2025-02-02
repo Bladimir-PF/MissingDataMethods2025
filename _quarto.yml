@@ -14,5 +14,5 @@ format:
     css: styles.css
     toc: true
 
-editor: source
+editor: visual
  
