@@ -1056,20 +1056,20 @@ perfMAR  0.6325129 1.0000000 1.0000000 1.0000000</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
-lm(formula = IQ ~ perfC, data = jobPerf)
+lm(formula = perfC ~ IQ, data = jobPerf)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--23.569  -7.425   1.216   6.572  29.287 
+-3.2472 -1.6498 -0.6301  1.2742  4.2956 
 
 Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)   70.439     11.143   6.322 5.87e-06 ***
-perfC          2.856      1.044   2.736   0.0136 *  
+            Estimate Std. Error t value Pr(&gt;|t|)  
+(Intercept)  0.06519    3.79433   0.017   0.9865  
+IQ           0.10285    0.03759   2.736   0.0136 *
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
-Residual standard error: 12.2 on 18 degrees of freedom
+Residual standard error: 2.315 on 18 degrees of freedom
 Multiple R-squared:  0.2937,    Adjusted R-squared:  0.2545 
 F-statistic: 7.487 on 1 and 18 DF,  p-value: 0.01357</code></pre>
 </div>
@@ -1080,20 +1080,20 @@ F-statistic: 7.487 on 1 and 18 DF,  p-value: 0.01357</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
-lm(formula = IQ ~ perfMCAR_meanImpute, data = jobPerf)
+lm(formula = perfMCAR_meanImpute ~ IQ, data = jobPerf)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--22.000  -5.256  -1.187   6.994  34.000 
+-3.5234 -1.2723 -0.4509  1.3402  4.0215 
 
 Coefficients:
-                    Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)           74.262     13.026   5.701 2.09e-05 ***
-perfMCAR_meanImpute    2.428      1.197   2.028   0.0577 .  
+            Estimate Std. Error t value Pr(&gt;|t|)  
+(Intercept)  2.94177    3.81241   0.772   0.4503  
+IQ           0.07658    0.03777   2.028   0.0577 .
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
-Residual standard error: 13.1 on 18 degrees of freedom
+Residual standard error: 2.326 on 18 degrees of freedom
 Multiple R-squared:  0.1859,    Adjusted R-squared:  0.1407 
 F-statistic: 4.112 on 1 and 18 DF,  p-value: 0.05766</code></pre>
 </div>
@@ -1242,6 +1242,142 @@ F-statistic: 4.674 on 1 and 18 DF,  p-value: 0.04434</code></pre>
 </ul></li>
 </ul></li>
 <li>Putting this together: you will likely end up making conclusions about your data that are wrong</li>
+</ul>
+</section>
+
+<section>
+<section id="auxiliary-variables-and-semi-partial-correlation" class="title-slide slide level1 center">
+<h1>Auxiliary Variables and Semi-Partial Correlation</h1>
+
+</section>
+<section id="auxiliary-variables-and-semi-partial-correlation-1" class="slide level2">
+<h2>Auxiliary Variables and Semi-Partial Correlation</h2>
+<p>The use of <strong>auxiliary variables</strong> can help mitigate bias and improve statistical power when missing data are present</p>
+<ul>
+<li>An auxiliary variable is an extraneous variable that correlates with missingness or the outcome but is not part of the main analysis</li>
+</ul>
+<p>A key aspect of auxiliary variable selection is understanding their <strong>semi-partial correlation</strong> with the outcome</p>
+<ul>
+<li>Semi-partial correlation quantifies the unique contribution of a predictor to the outcome, after removing its shared variance with other predictors</li>
+<li>This makes Semi-partial correlations useful for identifying the most informative auxiliary variables</li>
+</ul>
+</section></section>
+<section id="what-is-a-semi-partial-correlation" class="title-slide slide level1 center">
+<h1>What is a Semi-Partial Correlation?</h1>
+<ul>
+<li><strong>Semi-partial correlation</strong> (also known as part correlation) measures the unique association between a predictor and the outcome while controlling for other variables in the model</li>
+<li>Unlike <strong>partial correlation</strong>, which removes shared variance from both variables, semi-partial correlation removes shared variance only from the predictor variable, leaving the outcome variable unchanged</li>
+</ul>
+</section>
+
+<section>
+<section id="what-is-a-semi-partial-correlation-1" class="title-slide slide level1 center">
+<h1>What is a Semi-Partial Correlation?</h1>
+<p>Mathematically, the semi-partial correlation of a predictor <span class="math inline">\(( X_1 )\)</span> with an outcome <span class="math inline">\((Y)\)</span>, controlling for another predictor <span class="math inline">\(X_2\)</span>, is given by:</p>
+<p><span class="math display">\[ r_{Y(X_1.X_2)} = \frac{r_{YX_1} - r_{YX_2}r_{X_1X_2}}{\sqrt{1 - r_{X_1X_2}^2}} \]</span></p>
+<p>where: - <span class="math inline">\(r_{YX_1}\)</span>is the correlation between <span class="math inline">\(Y\)</span> and <span class="math inline">\(X_1\)</span>, - <span class="math inline">\(r_{YX_2}\)</span> is the correlation between <span class="math inline">\(Y\)</span> and <span class="math inline">\(X_2\)</span>, - <span class="math inline">\(r_{X_1X_2}\)</span> is the correlation between <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span>.</p>
+</section>
+<section id="why-is-semi-partial-correlation-important" class="slide level2">
+<h2>Why is Semi-Partial Correlation Important?</h2>
+<p>Semi-partial correlation is widely used in statistics for several reasons:</p>
+<ol type="1">
+<li><strong>Understanding Unique Contributions</strong> – It helps to determine how much unique variance a predictor explains in the outcome, which is useful in multiple regression and hierarchical modeling</li>
+<li><strong>Feature Selection</strong> – In machine learning and predictive modeling, semi-partial correlation can help identify the most important predictors</li>
+<li><strong>Model Interpretation</strong> – Researchers can use it to assess the relative importance of predictors in explaining variance in an outcome</li>
+<li><strong>Comparing Predictors</strong> – It allows us to compare multiple predictors to see which has the most unique explanatory power</li>
+</ol>
+<p>Because semi-partial correlation removes shared variance only from the predictor, it reflects the real-world scenario where some predictors contribute uniquely to an outcome while sharing variance with others.</p>
+</section>
+<section id="semi-partial-correlation-in-the-context-of-missing-data" class="slide level2">
+<h2>Semi-Partial Correlation in the Context of Missing Data</h2>
+<ul>
+<li>Semi-partial correlations help identify which auxiliary variables provide unique information about missingness or the outcome
+<ul>
+<li>This ensures that missing data handling methods, such as multiple imputation or maximum likelihood estimation, make the most use of available information</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="example-in-r" class="title-slide slide level1 center">
+<h1>Example in R</h1>
+
+</section>
+<section id="simulated-data" class="slide level2">
+<h2>Simulated Data</h2>
+<p>Let’s create a dataset where we examine semi-partial correlations:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href=""></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb18-2"><a href=""></a>n <span class="ot">=</span> <span class="dv">100</span></span>
+<span id="cb18-3"><a href=""></a>y <span class="ot">=</span> <span class="fu">rnorm</span>(n, <span class="at">mean=</span><span class="dv">50</span>, <span class="at">sd=</span><span class="dv">10</span>)   <span class="co"># Outcome variable</span></span>
+<span id="cb18-4"><a href=""></a>x1 <span class="ot">=</span> <span class="fu">rnorm</span>(n, <span class="at">mean=</span><span class="dv">10</span>, <span class="at">sd=</span><span class="dv">5</span>)    <span class="co"># Predictor 1</span></span>
+<span id="cb18-5"><a href=""></a>x2 <span class="ot">=</span> <span class="fu">rnorm</span>(n, <span class="at">mean=</span><span class="dv">20</span>, <span class="at">sd=</span><span class="dv">5</span>)    <span class="co"># Predictor 2</span></span>
+<span id="cb18-6"><a href=""></a>aux <span class="ot">=</span> .<span class="dv">05</span><span class="sc">*</span>y <span class="sc">+</span> <span class="fl">0.5</span><span class="sc">*</span>x1 <span class="sc">+</span> <span class="fl">0.3</span><span class="sc">*</span>x2 <span class="sc">+</span> <span class="fu">rnorm</span>(n, <span class="at">mean=</span><span class="dv">0</span>, <span class="at">sd=</span><span class="dv">2</span>)  <span class="co"># Auxiliary variable</span></span>
+<span id="cb18-7"><a href=""></a></span>
+<span id="cb18-8"><a href=""></a>data <span class="ot">=</span> <span class="fu">data.frame</span>(y, x1, x2, aux)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="computing-semi-partial-correlation-using-lm-residuals" class="slide level2">
+<h2>Computing Semi-Partial Correlation using lm() residuals</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href=""></a><span class="co"># Step 1: Regress the auxiliary variable on other predictors and obtain residuals</span></span>
+<span id="cb19-2"><a href=""></a>aux_resid <span class="ot">=</span> <span class="fu">resid</span>(<span class="fu">lm</span>(aux <span class="sc">~</span> x1 <span class="sc">+</span> x2, <span class="at">data=</span>data))</span>
+<span id="cb19-3"><a href=""></a></span>
+<span id="cb19-4"><a href=""></a><span class="co"># Step 2: Compute the correlation between residuals and the outcome</span></span>
+<span id="cb19-5"><a href=""></a>spr_lm <span class="ot">=</span> <span class="fu">cor</span>(aux_resid, data<span class="sc">$</span>y)</span>
+<span id="cb19-6"><a href=""></a><span class="fu">print</span>(spr_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.3371851</code></pre>
+</div>
+</div>
+</section>
+<section id="computing-semi-partial-correlation-using-the-ppcor-package" class="slide level2">
+<h2>Computing Semi-Partial Correlation using the <code>ppcor</code> package</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href=""></a><span class="co"># Compute semi-partial correlation using spcorr package</span></span>
+<span id="cb21-2"><a href=""></a>spr_spcorr <span class="ot">=</span> <span class="fu">spcor</span>(data)</span>
+<span id="cb21-3"><a href=""></a><span class="fu">print</span>(spr_spcorr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$estimate
+             y         x1         x2       aux
+y    1.0000000 -0.2359666 -0.3182904 0.3371851
+x1  -0.1543577  1.0000000 -0.3222919 0.7896905
+x2  -0.2605867 -0.4033669  1.0000000 0.6280408
+aux  0.1904317  0.6817890  0.4332414 1.0000000
+
+$p.value
+              y           x1           x2          aux
+y   0.000000000 1.932959e-02 1.403247e-03 6.859535e-04
+x1  0.129123301 0.000000e+00 1.210448e-03 4.366625e-22
+x2  0.009555429 3.816958e-05 0.000000e+00 4.454870e-12
+aux 0.060351647 1.092502e-14 8.354724e-06 0.000000e+00
+
+$statistic
+            y        x1        x2       aux
+y    0.000000 -2.379176 -3.289682  3.509232
+x1  -1.530736  0.000000 -3.335800 12.611715
+x2  -2.644587 -4.319133  0.000000  7.907571
+aux  1.900622  9.131503  4.709848  0.000000
+
+$n
+[1] 100
+
+$gp
+[1] 2
+
+$method
+[1] "pearson"</code></pre>
+</div>
+</div>
+</section></section>
+<section id="comparison-of-results" class="title-slide slide level1 center">
+<h1>Comparison of Results</h1>
+<p>Both methods should yield similar results, but <code>spcor</code> provides a more automated way to compute semi-partial correlations, making it easier to handle multiple predictors at once.</p>
+<ul>
+<li>But, ‘spcor’ doesn’t have the ability to specify certain combinations of variables</li>
+</ul>
+<p>Interpretation:</p>
+<ul>
+<li>If the semi-partial correlation is strong (e.g., above 0.30 in absolute value), the auxiliary variable is likely to contain unique information about the outcome and should be included in the missing data handling process</li>
 </ul>
 </section>
 

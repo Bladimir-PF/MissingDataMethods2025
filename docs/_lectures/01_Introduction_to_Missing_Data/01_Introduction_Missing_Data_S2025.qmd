@@ -10,13 +10,16 @@ format:
     incremental: false
 ---
 
-```{r setup}
+```{r setup, echo=FALSE, include=FALSE}
 # clear environment
 rm(list=ls())
 
 # load packages
 
-if (!require("lavaan")) library(lavaan)
+if (!require("lavaan")) install.packages(lavaan)
+library(lavaan)
+if (!require("ppcor")) install.packages("ppcor")
+library(ppcor)
 
 # load iqdata.csv
 jobPerf = read.csv("data/jobperf.csv")
@@ -31,6 +34,9 @@ jobPerfMCAR = jobPerfMCAR[complete.cases(jobPerfMCAR),]
 jobPerfMAR = jobPerf[c("IQ","perfMAR")]
 jobPerfMAR = jobPerfMAR[complete.cases(jobPerfMAR),]
 
+summary(lm(perfC~IQ, data=jobPerfComplete))
+summary(lm(perfMCAR~IQ, data=jobPerfMCAR))
+summary(lm(perfMAR~IQ, data=jobPerfMAR))
 ```
 
 ## Learning Objectives
@@ -590,14 +596,14 @@ jobPerf$perfMAR_meanImpute[is.na(jobPerf$perfMAR_meanImpute)] = mean(jobPerf$per
 ::: column
 Complete
 ```{r}
-summary(lm(IQ~perfC, data=jobPerf))
+summary(lm(perfC~IQ, data=jobPerf))
 ```
 :::
 
 ::: column
 MCAR
 ```{r}
-summary(lm(IQ~perfMCAR_meanImpute, data=jobPerf))
+summary(lm(perfMCAR_meanImpute~IQ, data=jobPerf))
 ```
 :::
 :::
@@ -682,6 +688,98 @@ summary(lm(IQ~perfMAR_meanImpute, data=jobPerf))
   * Standard errors will be too small
     * Leads to Type\-I Errors
 * Putting this together: you will likely end up making conclusions about your data that are wrong
+
+
+
+# Auxiliary Variables and Semi-Partial Correlation
+
+## Auxiliary Variables and Semi-Partial Correlation
+
+The use of **auxiliary variables** can help mitigate bias and improve statistical power when missing data are present
+
+- An auxiliary variable is an extraneous variable that correlates with missingness or the outcome but is not part of the main analysis
+
+A key aspect of auxiliary variable selection is understanding their **semi-partial correlation** with the outcome
+
+- Semi-partial correlation quantifies the unique contribution of a predictor to the outcome, after removing its shared variance with other predictors
+- This makes Semi-partial correlations useful for identifying the most informative auxiliary variables
+
+# What is a Semi-Partial Correlation?
+
+- **Semi-partial correlation** (also known as part correlation) measures the unique association between a predictor and the outcome while controlling for other variables in the model
+- Unlike **partial correlation**, which removes shared variance from both variables, semi-partial correlation removes shared variance only from the predictor variable, leaving the outcome variable unchanged
+
+# What is a Semi-Partial Correlation?
+
+Mathematically, the semi-partial correlation of a predictor $( X_1 )$ with an outcome $(Y)$, controlling for another predictor $X_2$, is given by:
+
+
+$$ r_{Y(X_1.X_2)} = \frac{r_{YX_1} - r_{YX_2}r_{X_1X_2}}{\sqrt{1 - r_{X_1X_2}^2}} $$
+
+where:
+- $r_{YX_1}$is the correlation between $Y$ and $X_1$,
+- $r_{YX_2}$ is the correlation between $Y$ and $X_2$,
+- $r_{X_1X_2}$ is the correlation between $X_1$ and $X_2$.
+
+## Why is Semi-Partial Correlation Important?
+
+Semi-partial correlation is widely used in statistics for several reasons:
+
+1. **Understanding Unique Contributions** – It helps to determine how much unique variance a predictor explains in the outcome, which is useful in multiple regression and hierarchical modeling
+2. **Feature Selection** – In machine learning and predictive modeling, semi-partial correlation can help identify the most important predictors
+3. **Model Interpretation** – Researchers can use it to assess the relative importance of predictors in explaining variance in an outcome
+4. **Comparing Predictors** – It allows us to compare multiple predictors to see which has the most unique explanatory power
+
+Because semi-partial correlation removes shared variance only from the predictor, it reflects the real-world scenario where some predictors contribute uniquely to an outcome while sharing variance with others. 
+
+## Semi-Partial Correlation in the Context of Missing Data
+
+- Semi-partial correlations help identify which auxiliary variables provide unique information about missingness or the outcome
+  - This ensures that missing data handling methods, such as multiple imputation or maximum likelihood estimation, make the most use of available information
+
+# Example in R
+
+## Simulated Data
+Let's create a dataset where we examine semi-partial correlations:
+
+```{r, echo=TRUE}
+set.seed(42)
+n = 100
+y = rnorm(n, mean=50, sd=10)   # Outcome variable
+x1 = rnorm(n, mean=10, sd=5)    # Predictor 1
+x2 = rnorm(n, mean=20, sd=5)    # Predictor 2
+aux = .05*y + 0.5*x1 + 0.3*x2 + rnorm(n, mean=0, sd=2)  # Auxiliary variable
+
+data = data.frame(y, x1, x2, aux)
+```
+
+## Computing Semi-Partial Correlation using lm() residuals
+```{r, echo=TRUE}
+# Step 1: Regress the auxiliary variable on other predictors and obtain residuals
+aux_resid = resid(lm(aux ~ x1 + x2, data=data))
+
+# Step 2: Compute the correlation between residuals and the outcome
+spr_lm = cor(aux_resid, data$y)
+print(spr_lm)
+```
+
+## Computing Semi-Partial Correlation using the `ppcor` package
+```{r, echo=TRUE} 
+
+# Compute semi-partial correlation using spcorr package
+spr_spcorr = spcor(data)
+print(spr_spcorr)
+```
+
+# Comparison of Results
+
+Both methods should yield similar results, but `spcor` provides a more automated way to compute semi-partial correlations, making it easier to handle multiple predictors at once. 
+
+- But, 'spcor' doesn't have the ability to specify certain combinations of variables
+
+Interpretation:
+
+- If the semi-partial correlation is strong (e.g., above 0.30 in absolute value), the auxiliary variable is likely to contain unique information about the outcome and should be included in the missing data handling process
 
 
 # Wrapping Up
