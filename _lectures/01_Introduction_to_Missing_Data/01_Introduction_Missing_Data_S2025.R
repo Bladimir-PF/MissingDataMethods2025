@@ -15,6 +15,7 @@ plot(painData$pain, painData$depress, pch = 19, xlab = "Pain", ylab = "Depressio
 # auxiliary variables and semipartial correlation
 
 # generate data
+library(ppcor)
 set.seed(42)
 n = 100
 y = rnorm(n, mean=50, sd=10)   # Outcome variable
@@ -33,5 +34,6 @@ print(spr_lm)
 
 # Compute semi-partial correlation using spcorr package
 spr_spcorr = spcor(data)
+?spcor.test
 print(spr_spcorr)
 

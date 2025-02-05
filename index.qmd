@@ -77,6 +77,7 @@ th, td {
 +---------+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 05 Feb  | Technical Prerequisites      | -   [Slides (PDF)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/02_Technical_Prerequisites/02_Technical_Prerequisites_S2025.pdf)                       |
 |         |                              | -   [R files](https://github.com/jonathantemplin/MissingDataMethods2025/tree/main/_lectures/02_Technical_Prerequisites)                                                      |
+|         |                              | -   [Lecture Video](https://youtu.be/LVLebx5hweI)                                                                                                                            |
 +---------+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 ## Remaining Schedule (Tentative)
