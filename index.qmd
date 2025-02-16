@@ -38,13 +38,9 @@ The course will follow the chapters of Applied Missing Data Analysis (2nd Editio
 
 ## Current Assignments
 
-| Assignment                              | Due Date |
-|-----------------------------------------|----------|
-| Read Enders (2022) Chapter 2            | 4 Feb    |
-| Complete Reading Assessment 2 (in ICON) | 4 Feb    |
-| Read Enders (2022) Chapter 3            | 11 Feb   |
-| Complete Reading Assessment 3 (in ICON) | 11 Feb   |
-| Homework #1 (Available in ICON)         | 14 Feb   |
+| Assignment                      | Due Date |
+|---------------------------------|----------|
+| Homework #2 (Available in ICON) | 28 Feb   |
 
 ## Lecture and Class Files and Links
 
@@ -63,25 +59,29 @@ th, td {
 </style>
 ```
 
-+---------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| # Date  | # Topic                       | # Materials                                                                                                                                                                  |
-+---------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 22 Jan  | Introduction to class         | -   [Syllabus](https://jonathantemplin.github.io/MissingDataMethods2025/s25mdm_syllabus.html)                                                                                |
-|         |                               | -   [Lecture Video](https://www.youtube.com/watch?v=-YUmmA_akLM&list=PLSmMs4UgmSMgYbH3ryj-BTk7F7WWbgWPO)                                                                     |
-+---------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 29 Jan  | Introduction to Missing Data  | -   [Slides (HTML)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/01_Introduction_to_Missing_Data/01_Introduction_Missing_Data_S2025.html#/title-slide) |
-|         |                               | -   [Slides (PDF)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/01_Introduction_to_Missing_Data/01_Introduction_Missing_Data_S2025.pdf)                |
-|         |                               | -   [R files](https://github.com/jonathantemplin/MissingDataMethods2025/tree/main/_lectures/01_Introduction_to_Missing_Data)                                                 |
-|         |                               | -   [Lecture Video](https://youtu.be/UbO_SZXaTcg)                                                                                                                            |
-+---------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 05 Feb  | Technical Prerequisites       | -   [Slides (PDF)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/02_Technical_Prerequisites/02_Technical_Prerequisites_S2025.pdf)                       |
-|         |                               | -   [R files](https://github.com/jonathantemplin/MissingDataMethods2025/tree/main/_lectures/02_Technical_Prerequisites)                                                      |
-|         |                               | -   [Lecture Video](https://youtu.be/LVLebx5hweI)                                                                                                                            |
-+---------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 12 Feb  | Maximum Likelihood Estimation | -   [Slides (PDF)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/03_Maximum_Likelihood_Estimation/03_Maximum_Likelihood_Estimation_S2025.pdf)           |
-|         |                               | -   [R files](https://github.com/jonathantemplin/MissingDataMethods2025/tree/main/_lectures/03_Maximum_Likelihood_Estimation)                                                |
-|         |                               | -   [Lecture Video](https://youtu.be/e4iMA0XB9qw)                                                                                                                            |
-+---------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++---------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| # Date  | # Topic                            | # Materials                                                                                                                                                                  |
++---------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 22 Jan  | Introduction to class              | -   [Syllabus](https://jonathantemplin.github.io/MissingDataMethods2025/s25mdm_syllabus.html)                                                                                |
+|         |                                    | -   [Lecture Video](https://www.youtube.com/watch?v=-YUmmA_akLM&list=PLSmMs4UgmSMgYbH3ryj-BTk7F7WWbgWPO)                                                                     |
++---------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 29 Jan  | Introduction to Missing Data       | -   [Slides (HTML)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/01_Introduction_to_Missing_Data/01_Introduction_Missing_Data_S2025.html#/title-slide) |
+|         |                                    | -   [Slides (PDF)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/01_Introduction_to_Missing_Data/01_Introduction_Missing_Data_S2025.pdf)                |
+|         |                                    | -   [R files](https://github.com/jonathantemplin/MissingDataMethods2025/tree/main/_lectures/01_Introduction_to_Missing_Data)                                                 |
+|         |                                    | -   [Lecture Video](https://youtu.be/UbO_SZXaTcg)                                                                                                                            |
++---------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 05 Feb  | Technical Prerequisites            | -   [Slides (PDF)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/02_Technical_Prerequisites/02_Technical_Prerequisites_S2025.pdf)                       |
+|         |                                    | -   [R files](https://github.com/jonathantemplin/MissingDataMethods2025/tree/main/_lectures/02_Technical_Prerequisites)                                                      |
+|         |                                    | -   [Lecture Video](https://youtu.be/LVLebx5hweI)                                                                                                                            |
++---------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 12 Feb  | Maximum Likelihood Estimation      | -   [Slides (PDF)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/03_Maximum_Likelihood_Estimation/03_Maximum_Likelihood_Estimation_S2025.pdf)           |
+|         |                                    | -   [R files](https://github.com/jonathantemplin/MissingDataMethods2025/tree/main/_lectures/03_Maximum_Likelihood_Estimation)                                                |
+|         |                                    | -   [Lecture Video](https://youtu.be/e4iMA0XB9qw)                                                                                                                            |
++---------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 19 Feb  | MLE with Missing Data (and lavaan) | -   [Slides (PDF)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/04_lavaan_and_Missing_Data_Using_MLEs/04_lavaan_and_Missing_Data_Using_MLEs_S2025.pdf) |
+|         |                                    | -   [R files](https://github.com/jonathantemplin/MissingDataMethods2025/tree/main/_lectures/04_lavaan_and_Missing_Data_Using_MLEs)                                           |
+|         |                                    | -   [Lecture Video](https://youtu.be/e4iMA0XB9qw)                                                                                                                            |
++---------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 ## Remaining Schedule (Tentative)
 
