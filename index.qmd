@@ -80,7 +80,7 @@ th, td {
 +----------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 19 Feb   | MLE with Missing Data (and lavaan) | -   [Slides (PDF)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/04_lavaan_and_Missing_Data_Using_MLEs/04_lavaan_and_Missing_Data_Using_MLE_S2025.pdf)  |
 |          |                                    | -   [R files](https://github.com/jonathantemplin/MissingDataMethods2025/tree/main/_lectures/04_lavaan_and_Missing_Data_Using_MLEs)                                           |
-|          |                                    | -   [Lecture Video](https://youtu.be/e4iMA0XB9qw)                                                                                                                            |
+|          |                                    | -   [Lecture Video](https://youtu.be/rW6WCXafvyE)                                                                                                                            |
 +----------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 ## Remaining Schedule (Tentative)

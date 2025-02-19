@@ -17,7 +17,7 @@ if (haspackage==FALSE){
 }
 library(semPlot)
 
-#Playing with Matrices =================================================================================================
+#Playing with Matrices =================================== ==============================================================
 #IMPORT DATA AND PUT INTO DATASET
 data01 = read.csv("jobperf.csv")
 
@@ -112,7 +112,7 @@ model01.syntax = "
 model01.fit = sem(model01.syntax, data=data01, mimic = "MPLUS", estimator = "MLR")
 
 #analysis summary (note the additional terms: standardized = TRUE for standardized estimates and fit.measures=TRUE for model fit indices)
-summary(model01.fit, standardized=TRUE, fit.measures=TRUE)
+summary(model01.fit, standardized=TRUE, fit.measures=TRUE, rsquare = TRUE)
 
 # compare results to OLS regression:
 summary(lm(data01$perfMAR ~ data01$IQ))
