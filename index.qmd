@@ -12,19 +12,29 @@ The course will follow the chapters of Applied Missing Data Analysis (2nd Editio
 
 ## Course Details
 
-|  |  |
-|----|----|
-| Instructor: | Jonathan Templin |
-| email: | [jonathan-templin\@uiowa.edu](mailto:jonathan-templin@uiowa.edu) |
-| Course website: | <https://jonathantemplin.github.io/MissingDataMethods2025/> |
-| Course repo: | <https://github.com/jonathantemplin/MissingDataMethods2025> |
++--------------------------+---------------------------------------------------------------------------------------+
+| Instructor:              | Jonathan Templin                                                                      |
++--------------------------+---------------------------------------------------------------------------------------+
+| email:                   | [jonathan-templin\@uiowa.edu](mailto:jonathan-templin@uiowa.edu)                      |
++--------------------------+---------------------------------------------------------------------------------------+
+| Course website:          | <https://jonathantemplin.github.io/MissingDataMethods2025/>                           |
++--------------------------+---------------------------------------------------------------------------------------+
+| Course repo:             | <https://github.com/jonathantemplin/MissingDataMethods2025>                           |
++--------------------------+---------------------------------------------------------------------------------------+
 | Course YouTube Playlist: | <https://www.youtube.com/watch?v=-YUmmA_akLM&list=PLSmMs4UgmSMgYbH3ryj-BTk7F7WWbgWPO> |
-| Office: | S300A Lindquist Center |
-| Office Phone: | 319-335-6429 |
-| Classroom: | S108 LC |
-| Course Meeting Time: | W 12:30pm-3:20pm |
-| Course Office Hours: | W 10:00am-12:00pm via Zoom at <https://uiowa.zoom.us/my/jonathantemplinuiowa> |
-| Syllabus: | <https://jonathantemplin.github.io/MissingDataMethods2025/s25mdm_syllabus.html> |
++--------------------------+---------------------------------------------------------------------------------------+
+| Office:                  | S300A Lindquist Center                                                                |
++--------------------------+---------------------------------------------------------------------------------------+
+| Office Phone:            | 319-335-6429                                                                          |
++--------------------------+---------------------------------------------------------------------------------------+
+| Classroom:               | S108 LC                                                                               |
++--------------------------+---------------------------------------------------------------------------------------+
+| Course Meeting Time:     | W 12:30pm-3:20pm                                                                      |
++--------------------------+---------------------------------------------------------------------------------------+
+| Course Office Hours:     | W 10:00am-12:00pm via Zoom at <https://uiowa.zoom.us/my/jonathantemplinuiowa>         |
++--------------------------+---------------------------------------------------------------------------------------+
+| Syllabus:                | <https://jonathantemplin.github.io/MissingDataMethods2025/s25mdm_syllabus.html>       |
++--------------------------+---------------------------------------------------------------------------------------+
 
 ## Current Assignments
 
@@ -50,49 +60,58 @@ th, td {
 </style>
 ```
 
-+--------+------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| # Date | # Topic                                                                | # Materials                                                                                                                                                                  |
-+--------+------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 22 Jan | Introduction to class                                                  | -   [Syllabus](https://jonathantemplin.github.io/MissingDataMethods2025/s25mdm_syllabus.html)                                                                                |
-|        |                                                                        | -   [Lecture Video](https://www.youtube.com/watch?v=-YUmmA_akLM&list=PLSmMs4UgmSMgYbH3ryj-BTk7F7WWbgWPO)                                                                     |
-+--------+------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 29 Jan | Introduction to Missing Data                                           | -   [Slides (HTML)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/01_Introduction_to_Missing_Data/01_Introduction_Missing_Data_S2025.html#/title-slide) |
-|        |                                                                        | -   [Slides (PDF)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/01_Introduction_to_Missing_Data/01_Introduction_Missing_Data_S2025.pdf)                |
-|        |                                                                        | -   [R files](https://github.com/jonathantemplin/MissingDataMethods2025/tree/main/_lectures/01_Introduction_to_Missing_Data)                                                 |
-|        |                                                                        | -   [Lecture Video](https://youtu.be/UbO_SZXaTcg)                                                                                                                            |
-+--------+------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 05 Feb | Technical Prerequisites                                                | -   [Slides (PDF)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/02_Technical_Prerequisites/02_Technical_Prerequisites_S2025.pdf)                       |
-|        |                                                                        | -   [R files](https://github.com/jonathantemplin/MissingDataMethods2025/tree/main/_lectures/02_Technical_Prerequisites)                                                      |
-|        |                                                                        | -   [Lecture Video](https://youtu.be/LVLebx5hweI)                                                                                                                            |
-+--------+------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 12 Feb | Maximum Likelihood Estimation                                          | -   [Slides (PDF)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/03_Maximum_Likelihood_Estimation/03_Maximum_Likelihood_Estimation_S2025.pdf)           |
-|        |                                                                        | -   [R files](https://github.com/jonathantemplin/MissingDataMethods2025/tree/main/_lectures/03_Maximum_Likelihood_Estimation)                                                |
-|        |                                                                        | -   [Lecture Video](https://youtu.be/e4iMA0XB9qw)                                                                                                                            |
-+--------+------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 19 Feb | MLE with Missing Data (and lavaan)                                     | -   [Slides (PDF)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/04_lavaan_and_Missing_Data_Using_MLEs/04_lavaan_and_Missing_Data_Using_MLE_S2025.pdf)  |
-|        |                                                                        | -   [R files](https://github.com/jonathantemplin/MissingDataMethods2025/tree/main/_lectures/04_lavaan_and_Missing_Data_Using_MLEs)                                           |
-|        |                                                                        | -   [Lecture Video](https://youtu.be/e4iMA0XB9qw)                                                                                                                            |
-+--------+------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 26 Feb | No Class                                                               |                                                                                                                                                                              |
-+--------+------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 05 Mar | lavaan and Maximum Likelihood Estimation with Missing Data (Chapter 3) | -   [Handout (html)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/05_Missing_Data_with_MLEs/05_MLE_with_Missing_Data.html)                             |
-|        |                                                                        | -   [R files](https://github.com/jonathantemplin/MissingDataMethods2025/tree/main/_lectures/05_Missing_Data_with_MLEs)                                                       |
-|        |                                                                        | -   [Lecture Video](https://youtu.be/o8G5bN-6QSg)                                                                                                                            |
-+--------+------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 12 Mar | Introduction to Bayesian Methods                                       | -   [Slides (pdf)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/06_Bayesian_Estimation/06_Introduction_to_Bayesian.pdf)                                |
-|        |                                                                        | -   [R files](https://github.com/jonathantemplin/MissingDataMethods2025/tree/main/_lectures/06_Bayesian_Estimation)                                                          |
-|        |                                                                        | -   [Lecture Video](https://youtu.be/Su9LCvlAa7E)                                                                                                                            |
-+--------+------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------+------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| # Date     | # Topic                                                                | # Materials                                                                                                                                                                  |
++------------+------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 22 Jan     | Introduction to class                                                  | -   [Syllabus](https://jonathantemplin.github.io/MissingDataMethods2025/s25mdm_syllabus.html)                                                                                |
+|            |                                                                        | -   [Lecture Video](https://www.youtube.com/watch?v=-YUmmA_akLM&list=PLSmMs4UgmSMgYbH3ryj-BTk7F7WWbgWPO)                                                                     |
++------------+------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 29 Jan     | Introduction to Missing Data                                           | -   [Slides (HTML)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/01_Introduction_to_Missing_Data/01_Introduction_Missing_Data_S2025.html#/title-slide) |
+|            |                                                                        | -   [Slides (PDF)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/01_Introduction_to_Missing_Data/01_Introduction_Missing_Data_S2025.pdf)                |
+|            |                                                                        | -   [R files](https://github.com/jonathantemplin/MissingDataMethods2025/tree/main/_lectures/01_Introduction_to_Missing_Data)                                                 |
+|            |                                                                        | -   [Lecture Video](https://youtu.be/UbO_SZXaTcg)                                                                                                                            |
++------------+------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 05 Feb     | Technical Prerequisites                                                | -   [Slides (PDF)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/02_Technical_Prerequisites/02_Technical_Prerequisites_S2025.pdf)                       |
+|            |                                                                        | -   [R files](https://github.com/jonathantemplin/MissingDataMethods2025/tree/main/_lectures/02_Technical_Prerequisites)                                                      |
+|            |                                                                        | -   [Lecture Video](https://youtu.be/LVLebx5hweI)                                                                                                                            |
++------------+------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 12 Feb     | Maximum Likelihood Estimation                                          | -   [Slides (PDF)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/03_Maximum_Likelihood_Estimation/03_Maximum_Likelihood_Estimation_S2025.pdf)           |
+|            |                                                                        | -   [R files](https://github.com/jonathantemplin/MissingDataMethods2025/tree/main/_lectures/03_Maximum_Likelihood_Estimation)                                                |
+|            |                                                                        | -   [Lecture Video](https://youtu.be/e4iMA0XB9qw)                                                                                                                            |
++------------+------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 19 Feb     | MLE with Missing Data (and lavaan)                                     | -   [Slides (PDF)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/04_lavaan_and_Missing_Data_Using_MLEs/04_lavaan_and_Missing_Data_Using_MLE_S2025.pdf)  |
+|            |                                                                        | -   [R files](https://github.com/jonathantemplin/MissingDataMethods2025/tree/main/_lectures/04_lavaan_and_Missing_Data_Using_MLEs)                                           |
+|            |                                                                        | -   [Lecture Video](https://youtu.be/e4iMA0XB9qw)                                                                                                                            |
++------------+------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 26 Feb     | No Class                                                               |                                                                                                                                                                              |
++------------+------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 05 Mar     | lavaan and Maximum Likelihood Estimation with Missing Data (Chapter 3) | -   [Handout (html)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/05_Missing_Data_with_MLEs/05_MLE_with_Missing_Data.html)                             |
+|            |                                                                        | -   [R files](https://github.com/jonathantemplin/MissingDataMethods2025/tree/main/_lectures/05_Missing_Data_with_MLEs)                                                       |
+|            |                                                                        | -   [Lecture Video](https://youtu.be/o8G5bN-6QSg)                                                                                                                            |
++------------+------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 12 Mar     | Introduction to Bayesian Methods                                       | -   [Slides (pdf)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/06_Bayesian_Estimation/06_Introduction_to_Bayesian.pdf)                                |
+|            |                                                                        | -   [R files](https://github.com/jonathantemplin/MissingDataMethods2025/tree/main/_lectures/06_Bayesian_Estimation)                                                          |
+|            |                                                                        | -   [Lecture Video](https://youtu.be/Su9LCvlAa7E)                                                                                                                            |
++------------+------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 26 Mar     | Bayesian Estimation with Missing Data                                  | -   [Slides (pdf)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/07_Missing_Data_with_Bayeisan/07_Bayesian_with_Missing_data.html)                      |
+|            |                                                                        | -   [R files](https://github.com/jonathantemplin/MissingDataMethods2025/tree/main/_lectures/07_Missing_Data_with_Bayeisan)                                                   |
+|            |                                                                        | -   Lecture Video (after class)                                                                                                                                              |
++------------+------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 ## Remaining Schedule (Tentative)
 
-| Week | Date | Topic | Reading |
-|----|----|----|----|
-| 9 | 19 Mar | Spring Break: No Class | No Readings |
-| 10 | 26 Mar | Bayesian Estimation for Categorical Variables | Chapter 6 |
-| 11 | 2 Apr | Multiple Imputation | Chapter 7 |
-| 12 | 9 Apr | Multilevel Missing Data | Chapter 8 |
-| 13 | 16 Apr | Missing Not at Random Processes | Chapter 9 |
-| 14 | 23 Apr | Missing Data in Psychometric Models: Latent Variable Scores | Mislevy et al. (1992) |
-| 15 | 30 Apr | No Class: AERA/NCME Conference |  |
-| 16 | 7 May | Missing Data in Psychometric Models: Implications for CAT | Doebler et al. (2013); Jewsbury et al. (2024); |
++----------+----------+-----------------------------------------------+------------------+
+| Week     | Date     | Topic                                         | Reading          |
++==========+==========+===============================================+==================+
+| 11       | 2 Apr    | Bayesian Estimation with Missing Data         | Chapter 5        |
++----------+----------+-----------------------------------------------+------------------+
+| 12       | 9 Apr    | Bayesian Estimation for Categorical Variables | Chapter 6        |
++----------+----------+-----------------------------------------------+------------------+
+| 13       | 16 Apr   | Multiple Imputation                           | Chapter 7        |
++----------+----------+-----------------------------------------------+------------------+
+| 14       | 23 Apr   | Multilevel Missing Data                       | Chapter 8        |
++----------+----------+-----------------------------------------------+------------------+
+| 15       | 30 Apr   | No Class: AERA/NCME Conference                |                  |
++----------+----------+-----------------------------------------------+------------------+
+| 16       | 7 May    | Missing Not at Random Processes               | Chapter 9        |
++----------+----------+-----------------------------------------------+------------------+
