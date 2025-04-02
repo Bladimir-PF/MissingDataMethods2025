@@ -188,7 +188,7 @@ model01a.jags.syntax <- function(){
 
     # Likelihood
     for (i in 1:n) {
-      Y[i, 1:2] ~ dmnorm(mu, Omega[,])
+      Y[i, 1:2] ~ dmnorm(mu[1:2], Omega[1:2,1:2])
     }
 
     # Means vector
@@ -222,13 +222,13 @@ model01.jags.samples = jags(
   n.chains = 5,
   n.iter = 6000, # R2jags includes burn-in in n.iter
   n.burnin = 1000,
-  n.thin = 1,
+  n.thin = 1
 )
 
 # JAGS problem: Multivariate distributions cannot contain missing data 
 
 ## What things would look like if there were complete cases:
-data03 = data02[c("use", "perf")]
+data03 = data02[c("perf", "use")]
 data03 = data03[complete.cases(data03),]
 
 # Prepare data for JAGS
@@ -256,6 +256,24 @@ model01b.jags.samples
 # next with a plot of the chain:
 plot(as.mcmc(model01b.jags.samples))
 
+# extracting MCMC chain from R2jags object
+model01b.chainList = mcmc.list(
+  lapply(X = 1:dim(model01b.jags.samples$BUGSoutput$sims.array)[2], FUN = function(x) {
+    return(as.mcmc(model01b.jags.samples$BUGSoutput$sims.array[,x,]))
+  })
+)
+
+# gathering autocorrelation information (from coda package, which loads with R2jags)
+coda::autocorr.diag(model01b.chainList)
+
+# plotting autocorrelation information
+coda::autocorr.plot(model01b.chainList)
+
+#analysis estimation
+model01.lavaan.fit = lavaan(model01.lavaan.syntax, data=data03, estimator = "MLR", mimic = "MPLUS")
+summary(model01.lavaan.fit, standardized=TRUE, fit.measures=TRUE)
+
+
 # now back to missing data...there are two ways to handle missing data in JAGS:
 # (1) omit missing cases from the likelihood function (same likelihood as maximum likelihood)
 # (2) have JAGS impute data using Bayes' Theorem
@@ -263,7 +281,7 @@ plot(as.mcmc(model01b.jags.samples))
 
 
 
-
+# f(perf,use) = f(perf|use)f(use)
 # compare with factored regression specification in lavaan: perf ~ use and use ~ 1 --> same log likelihood
 model01c.lavaan.syntax = "
 
@@ -285,8 +303,8 @@ summary(model01c.lavaan.fit, standardized=TRUE, fit.measures=TRUE)
 
 # examining gamma priors on precision parameters
 plot(
-  x = seq(.001,2,.001),
-  y = dgamma(x = seq(.001,2,.001), shape = 1, rate = 1),
+  x = seq(.001,20,.001),
+  y = dgamma(x = seq(.001,20,.001), shape = .0001, rate = .0001),
   type = "l"
 )
 
@@ -318,7 +336,7 @@ model01c.jags.syntax <- function(){
   for (obs in 1:N){
     # perf mean model
     
-    muPerf[obs] <- perf.intercept + perf.use*use[obs]
+    muPerf[obs] <- perf.intercept + perf.use*(use[obs])
     perf[obs] ~ dnorm(muPerf[obs], tauPerf)    
   }
   
@@ -377,6 +395,20 @@ model01c.jags.samples
 
 plot(as.mcmc(model01c.jags.samples))
 
+# extracting MCMC chain from R2jags object
+model01c.chainList = mcmc.list(
+  lapply(X = 1:dim(model01c.jags.samples$BUGSoutput$sims.array)[2], FUN = function(x) {
+    return(as.mcmc(model01c.jags.samples$BUGSoutput$sims.array[,x,]))
+  })
+)
+
+# gathering autocorrelation information (from coda package, which loads with R2jags)
+coda::autocorr.diag(model01c.chainList)
+
+# plotting autocorrelation information
+coda::autocorr.plot(model01c.chainList)
+
+
 # second model--add predictors as main effects only: ===================================================================
 
 # we will create missing data on female (missing completely at random for now)
@@ -401,7 +433,7 @@ perf ~~ use
 "
 
 #analysis estimation
-model02.fit = lavaan(model02.syntax, data=data02, estimator = "MLR", mimic = "MPLUS")
+model02.fit = lavaan(model02a.lavaan.syntax, data=data02, estimator = "MLR", mimic = "MPLUS")
 
 #analysis summary (note the additional terms: standardized = TRUE for standardized estimates and fit.measures=TRUE for model fit indices)
 summary(model02.fit, standardized=TRUE, fit.measures=TRUE)
@@ -498,8 +530,10 @@ model02a.jags.samples = jags(
 )
 
 # problem...predictors have missing data...solution: enter into the likelihood
-
-
+# f(perf, use, female, cc10) = f(perf|female, cc10)f(use|female, cc10)f(female)f(cc10)\
+# f(perf, use, female, cc10) = f(perf, use | female, cc10)f(female)f(cc10)
+# f(perf, use, female, cc10) = f(perf|female, cc10, use)f(use|female, cc10)f(female|cc10)f(cc10)
+# f(female, cc10) = 
 model02b.jags.syntax = function(){
   
   # model for female -------------
@@ -509,16 +543,18 @@ model02b.jags.syntax = function(){
   
   # priors for female
   pFemale ~ dbeta(1, 1)
+  varFemale = pFemale*(1-pFemale) # for standardized coefficents
   
   # model for cc10
   for (obs in 1:N){
     cc10[obs] ~ dnorm(muCC10, tauCC10)  
   }
   
-  
   # priors for cc10
   muCC10 ~ dnorm(0, 1/1000)
   tauCC10 ~ dgamma(1, 1)
+  
+  varCC10 = 1/tauCC10 # for standardized coefficients
   
   # model for use: -----------------
   
@@ -544,6 +580,12 @@ model02b.jags.syntax = function(){
   # use variance
   sigma2Use <- 1/tauUse
   
+  # create standardized coefficients
+  varUse = use.female^2*varFemale + use.cc10^2*varCC10 + sigma2Use
+  
+  use.femaleS = use.female*sqrt(varFemale)/sqrt(varUse)
+  use.cc10S = use.cc10*sqrt(varCC10)/sqrt(varUse)
+  
   # model for perf: -----------------
   
   # perf model data distribution
@@ -567,6 +609,12 @@ model02b.jags.syntax = function(){
   
   # perf residual variance
   sigma2Perf <- 1/tauPerf
+  
+  # create standardized coefficients
+  varPerf = use.female^2*varFemale + use.cc10^2*varCC10 + sigma2Perf
+  
+  perf.femaleS = perf.female*sqrt(varFemale)/sqrt(varUse)
+  perf.cc10S = perf.cc10*sqrt(varCC10)/sqrt(varUse)
   
   
 }
@@ -601,7 +649,17 @@ model02b.jags.params = c(
   "perfMean0",
   "perfSigma2_0",
   "perf[3]",
-  "use[8]"
+  "use[8]",
+  "female[5]",
+  "cc10[6]",
+  "varFemale",
+  "varCC10",
+  "varUse",
+  "use.femaleS",
+  "use.cc10S",
+  "varPerf",
+  "perf.femaleS",
+  "perf.cc10S"
 )
 
 # Run the model using the R2jags package
@@ -616,6 +674,20 @@ model02b.jags.samples = jags(
 )
 
 model02b.jags.samples 
+
+# extracting MCMC chain from R2jags object
+model02b.chainList = mcmc.list(
+  lapply(X = 1:dim(model02b.jags.samples$BUGSoutput$sims.array)[2], FUN = function(x) {
+    return(as.mcmc(model02b.jags.samples$BUGSoutput$sims.array[,x,]))
+  })
+)
+
+# gathering autocorrelation information (from coda package, which loads with R2jags)
+coda::autocorr.diag(model02b.chainList)
+
+# plotting autocorrelation information
+coda::autocorr.plot(model02b.chainList)
+
 
 # problem--regression isn't saturated...need residual covariance...no easy solution to this with missing data
 
@@ -743,6 +815,19 @@ model03a.jags.samples = jags(
 )
 
 model03a.jags.samples 
+
+# extracting MCMC chain from R2jags object
+model03a.chainList = mcmc.list(
+  lapply(X = 1:dim(model03a.jags.samples$BUGSoutput$sims.array)[2], FUN = function(x) {
+    return(as.mcmc(model03a.jags.samples$BUGSoutput$sims.array[,x,]))
+  })
+)
+
+# gathering autocorrelation information (from coda package, which loads with R2jags)
+coda::autocorr.diag(model03a.chainList)
+
+# plotting autocorrelation information
+coda::autocorr.plot(model03a.chainList)
 
 # auxiliary variables ----------------------------------------------------------------------------------
 
@@ -1040,3 +1125,19 @@ model04a.jags.samples = jags(
 )
 
 model04a.jags.samples 
+
+# extracting MCMC chain from R2jags object
+model04a.chainList = mcmc.list(
+  lapply(X = 1:dim(model04a.jags.samples$BUGSoutput$sims.array)[2], FUN = function(x) {
+    return(as.mcmc(model04a.jags.samples$BUGSoutput$sims.array[,x,]))
+  })
+)
+
+# gathering autocorrelation information (from coda package, which loads with R2jags)
+coda::autocorr.diag(model04a.chainList)
+
+# plotting autocorrelation information
+coda::autocorr.plot(model04a.chainList)
+
+# from Chapter 6: using data augmentation for Gibbs sampling for models with outcomes that are binary variables
+# we can use the same approach for missing data in JAGS
