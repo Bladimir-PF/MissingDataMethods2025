@@ -12,19 +12,29 @@ The course will follow the chapters of Applied Missing Data Analysis (2nd Editio
 
 ## Course Details
 
-|  |  |
-|----|----|
-| Instructor: | Jonathan Templin |
-| email: | [jonathan-templin\@uiowa.edu](mailto:jonathan-templin@uiowa.edu) |
-| Course website: | <https://jonathantemplin.github.io/MissingDataMethods2025/> |
-| Course repo: | <https://github.com/jonathantemplin/MissingDataMethods2025> |
++--------------------------+---------------------------------------------------------------------------------------+
+| Instructor:              | Jonathan Templin                                                                      |
++--------------------------+---------------------------------------------------------------------------------------+
+| email:                   | [jonathan-templin\@uiowa.edu](mailto:jonathan-templin@uiowa.edu)                      |
++--------------------------+---------------------------------------------------------------------------------------+
+| Course website:          | <https://jonathantemplin.github.io/MissingDataMethods2025/>                           |
++--------------------------+---------------------------------------------------------------------------------------+
+| Course repo:             | <https://github.com/jonathantemplin/MissingDataMethods2025>                           |
++--------------------------+---------------------------------------------------------------------------------------+
 | Course YouTube Playlist: | <https://www.youtube.com/watch?v=-YUmmA_akLM&list=PLSmMs4UgmSMgYbH3ryj-BTk7F7WWbgWPO> |
-| Office: | S300A Lindquist Center |
-| Office Phone: | 319-335-6429 |
-| Classroom: | S108 LC |
-| Course Meeting Time: | W 12:30pm-3:20pm |
-| Course Office Hours: | W 10:00am-12:00pm via Zoom at <https://uiowa.zoom.us/my/jonathantemplinuiowa> |
-| Syllabus: | <https://jonathantemplin.github.io/MissingDataMethods2025/s25mdm_syllabus.html> |
++--------------------------+---------------------------------------------------------------------------------------+
+| Office:                  | S300A Lindquist Center                                                                |
++--------------------------+---------------------------------------------------------------------------------------+
+| Office Phone:            | 319-335-6429                                                                          |
++--------------------------+---------------------------------------------------------------------------------------+
+| Classroom:               | S108 LC                                                                               |
++--------------------------+---------------------------------------------------------------------------------------+
+| Course Meeting Time:     | W 12:30pm-3:20pm                                                                      |
++--------------------------+---------------------------------------------------------------------------------------+
+| Course Office Hours:     | W 10:00am-12:00pm via Zoom at <https://uiowa.zoom.us/my/jonathantemplinuiowa>         |
++--------------------------+---------------------------------------------------------------------------------------+
+| Syllabus:                | <https://jonathantemplin.github.io/MissingDataMethods2025/s25mdm_syllabus.html>       |
++--------------------------+---------------------------------------------------------------------------------------+
 
 ## Current Assignments
 
@@ -91,12 +101,11 @@ th, td {
 |                                                          |                                                                        | -   [R files](https://github.com/jonathantemplin/MissingDataMethods2025/tree/main/_lectures/08_Multiple_Imputation)                                                          |
 |                                                          |                                                                        | -   [Lecture Video](https://youtu.be/d6KvuYFV5xc)                                                                                                                            |
 +----------------------------------------------------------+------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 30 Apr                                                   | Multilevel Missing Data and MNAR Processes                             | -   Multilevel Missing Data Slides (pdf)                                                                                                                                     |
-|                                                          |                                                                        | -   MNAR Processes Slides (pdf)                                                                                                                                              |
-|                                                          |                                                                        | -   R files                                                                                                                                                                  |
+| 30 Apr                                                   | Multilevel Missing Data and MNAR Processes                             | -   [Multilevel Missing Data Slides](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/09_Multilevel_Missing_Data/09_Multilevel_Missing_Data_And_NMAR.html) |
+|                                                          |                                                                        | -   [MNAR Processes Slides](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/10_Missing_Not_At_Random/10_Missing_Not_At_Random.html)                       |
 |                                                          |                                                                        | -   Lecture Video (available after class)                                                                                                                                    |
 +----------------------------------------------------------+------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 07 May                                                   | Psychometric Missing Data                                              | -   Slides (pdf)                                                                                                                                                             |
-|                                                          |                                                                        | -   R files                                                                                                                                                                  |
+| 07 May                                                   | Psychometric Missing Data                                              | -   [Slides (pdf)](https://jonathantemplin.github.io/MissingDataMethods2025/_lectures/11_Psychometric_Missing_Data/11_Psychometric_Missing_data.pdf)                         |
+|                                                          |                                                                        | -   [R files](https://github.com/jonathantemplin/MissingDataMethods2025/tree/main/_lectures/11_Psychometric_Missing_Data)                                                    |
 |                                                          |                                                                        | -   Lecture Video (available after class)                                                                                                                                    |
 +----------------------------------------------------------+------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
